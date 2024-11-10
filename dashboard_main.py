@@ -55,7 +55,7 @@ def set_page_selection(page):
 
 with st.sidebar:
 
-    st.title('Iris Classification')
+    st.title('Diabetes')
 
     # Page Button Navigation
     st.subheader("Pages")
