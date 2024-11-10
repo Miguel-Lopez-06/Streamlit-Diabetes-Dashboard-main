@@ -1,4 +1,4 @@
-# Iris Classification Dashboard using Streamlit
+# Diabetes Dashboard using Streamlit
 
 A Streamlit web application that performs **Exploratory Data Analysis (EDA)**, **Data Preprocessing**, and **Supervised Machine Learning** to classify Iris species from the Iris dataset (Setosa, Versicolor, and Virginica) using **Decision Tree Classifier** and **Random Forest Regressor**.
 
