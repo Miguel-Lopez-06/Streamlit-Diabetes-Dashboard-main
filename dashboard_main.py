@@ -34,7 +34,7 @@ from PIL import Image
 
 # Page configuration
 st.set_page_config(
-    page_title="Iris Classification", 
+    page_title="Diabetes", 
     page_icon="assets/icon/icon.png",
     layout="wide",
     initial_sidebar_state="expanded")
@@ -74,9 +74,6 @@ with st.sidebar:
 
     if st.button("Machine Learning", use_container_width=True, on_click=set_page_selection, args=('machine_learning',)): 
         st.session_state.page_selection = "machine_learning"
-
-    if st.button("Prediction", use_container_width=True, on_click=set_page_selection, args=('prediction',)): 
-        st.session_state.page_selection = "prediction"
 
     if st.button("Conclusion", use_container_width=True, on_click=set_page_selection, args=('conclusion',)):
         st.session_state.page_selection = "conclusion"
