@@ -103,8 +103,8 @@ iris_df = pd.read_csv("data/IRIS.csv")
 dt_classifier = joblib.load('assets/models/decision_tree_model.joblib')
 rfr_classifier = joblib.load('assets/models/logistic_regression_model.joblib')
 
-features = ['sepal_length', 'sepal_width', 'petal_length', 'petal_width']
-species_list = ['Iris-setosa', 'Iris-versicolor', 'Iris-virginica']
+features = ['Pregnancies', 'Glucose', 'BloodPressure', 'SkinThickness', 'Insulin', 'BMI', 'DiabetesPedigreeFunction', 'Age']
+species_list = ['No Diabetes', 'Diabetes']
 
 # -------------------------
 
