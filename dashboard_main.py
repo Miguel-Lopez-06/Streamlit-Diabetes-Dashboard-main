@@ -210,7 +210,9 @@ elif st.session_state.page_selection == "eda":
 
     diabetes_df['Outcome'].value_counts()
 
-     # Separate majority and minority classes
+    from sklearn.utils import resample
+
+# Separate majority and minority classes
     majority_class = diabetes_df[diabetes_df['Outcome'] == 'No Diabetes']
     minority_class = diabetes_df[diabetes_df['Outcome'] == 'Diabetes']
 
@@ -228,7 +230,7 @@ elif st.session_state.page_selection == "eda":
     balanced_df = pd.concat([majority_class, minority_upsampled])
 
 # Display new class counts
-    balanced_df['Outcome'].value_counts()
+    print(balanced_df['Outcome'].value_counts())
 
 
 # Data Cleaning Page
