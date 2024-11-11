@@ -715,14 +715,14 @@ elif  st.session_state.page_selection == "prediction":
             st.markdown(f'The predicted Iris species is: `{classes_list[rfr_prediction[0]]}`')
 
     # Create 3 Data Frames containing  5 rows for each species
-    setosa_samples = iris_df[iris_df["species"] == "Iris-setosa"].head(5)
-    versicolor_samples = iris_df[iris_df["species"] == "Iris-versicolor"].head(5)
-    virginica_samples = iris_df[iris_df["species"] == "Iris-virginica"].head(5)
+    setosa_samples = diabtetes_df[iris_df["species"] == "Iris-setosa"].head(5)
+    versicolor_samples = diabetes_df[iris_df["species"] == "Iris-versicolor"].head(5)
+    virginica_samples = diabetes_df[iris_df["species"] == "Iris-virginica"].head(5)
 
     if show_dataset:
         # Display the dataset
         st.subheader("Dataset")
-        st.dataframe(iris_df, use_container_width=True, hide_index=True)
+        st.dataframe(diabetes_df, use_container_width=True, hide_index=True)
 
     if show_classes:
         # Iris-setosa Samples
