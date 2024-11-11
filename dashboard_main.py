@@ -206,7 +206,9 @@ elif st.session_state.page_selection == "eda":
                 - :orange[**Pairwise Scatter Plot Matrix**]: Highlighting *overlaps* and *differences* among Iris species' features.
                 ''')
 
+    diabetes_df['Outcome'].unique()
 
+    diabetes_df['Outcome'].value_counts()
 
 
 # Data Cleaning Page
