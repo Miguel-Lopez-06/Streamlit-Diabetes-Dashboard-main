@@ -75,6 +75,9 @@ with st.sidebar:
     if st.button("Machine Learning", use_container_width=True, on_click=set_page_selection, args=('machine_learning',)): 
         st.session_state.page_selection = "machine_learning"
 
+    if st.button("Prediction", use_container_width=True, on_click=set_page_selection, args=('prediction',)): 
+        st.session_state.page_selection = "prediction"
+
     if st.button("Conclusion", use_container_width=True, on_click=set_page_selection, args=('conclusion',)):
         st.session_state.page_selection = "conclusion"
 
@@ -187,7 +190,8 @@ if st.session_state.page_selection == "about":
     2. `EDA` - Exploratory Data Analysis of the Diabetes dataset. Highlighting the distribution of Diabetes and the relationship between the features. Includes graphs such as Pie Chart, Scatter Plots, and Pairwise Scatter Plot Matrix.
     3. `Data Cleaning / Pre-processing` - Data cleaning and pre-processing steps such as encoding the species column and splitting the dataset into training and testing sets.
     4. `Machine Learning` - Training two supervised classification models: Decision Tree Classifier and Random Forest Regressor. Includes model evaluation, feature importance, and tree plot.
-    5. `Conclusion` - Summary of the insights and observations from the EDA and model training.
+    5. `Prediction` - Prediction page where users can input values to predict the Iris species using the trained models.
+    6. `Conclusion` - Summary of the insights and observations from the EDA and model training.
 
 
     """)
