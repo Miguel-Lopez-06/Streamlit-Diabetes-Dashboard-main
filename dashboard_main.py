@@ -97,6 +97,7 @@ with st.sidebar:
 
 # Load data
 diabetes_df = pd.read_csv("data/diabetes.csv")
+diabetes_df['Outcome'] = diabetes_df['Outcome'].map({1: 'Diabetes', 0: 'No Diabetes'})
 
 # -------------------------
 
