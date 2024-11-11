@@ -94,7 +94,7 @@ with st.sidebar:
 # Data
 
 # Load data
-iris_df = pd.read_csv("data/diabetes.csv")
+diabetes_df = pd.read_csv("data/diabetes.csv")
 
 # -------------------------
 
