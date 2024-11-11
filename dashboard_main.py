@@ -228,11 +228,6 @@ elif st.session_state.page_selection == "data_cleaning":
 
 # 3. Now you can remap the values in the 'Outcome_encoded' column
     diabetes_df['Outcome_encoded'] = diabetes_df['Outcome_encoded'].map({0: 1, 1: 0})
-    
-
-    encoder = LabelEncoder()
-
-    diabetes_df['Outcome_encoded'] = encoder.fit_transform(diabetes_df['Outcome'])
 
     st.dataframe(diabetes_df.head(), use_container_width=True, hide_index=True)
 
