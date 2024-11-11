@@ -187,7 +187,7 @@ if st.session_state.page_selection == "about":
     2. `EDA` - Exploratory Data Analysis of the Iris Flower dataset. Highlighting the distribution of Iris species and the relationship between the features. Includes graphs such as Pie Chart, Scatter Plots, and Pairwise Scatter Plot Matrix.
     3. `Data Cleaning / Pre-processing` - Data cleaning and pre-processing steps such as encoding the species column and splitting the dataset into training and testing sets.
     4. `Machine Learning` - Training two supervised classification models: Decision Tree Classifier and Random Forest Regressor. Includes model evaluation, feature importance, and tree plot.
-    5. `Prediction` - Prediction page where users can input values to predict the Iris species using the trained models.
+    5. `Prediction` 
     6. `Conclusion` - Summary of the insights and observations from the EDA and model training.
 
 
