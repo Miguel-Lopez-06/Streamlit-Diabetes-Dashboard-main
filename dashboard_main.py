@@ -222,6 +222,10 @@ elif st.session_state.page_selection == "data_cleaning":
     """)
 
     encoder = LabelEncoder()
+    diabetes_df['Outcome_encoded'] = encoder.fit_transform(diabetes_df['Outcome'])
+
+# 3. Now you can remap the values in the 'Outcome_encoded' column
+    diabetes_df['Outcome_encoded'] = diabetes_df['Outcome_encoded'].map({0: 1, 1: 0})
 
     diabetes_df['Outcome_encoded'] = encoder.fit_transform(diabetes_df['Outcome'])
 
@@ -232,20 +236,6 @@ elif st.session_state.page_selection == "data_cleaning":
     Now we converted the values of **species** column to numerical values using `LabelEncoder`. The **species_encoded** column can now be used as a label for training our supervised model.
          
     """)
-
-    import pandas as pd
-    from sklearn.preprocessing import LabelEncoder
-
-# Assuming 'diabetes_df' is your DataFrame and 'Outcome' is the column to encode:
-
-# 1. Create a LabelEncoder instance
-    encoder = LabelEncoder()
-
-# 2. Encode the 'Outcome' column and store it in a new column 'Outcome_encoded'
-    diabetes_df['Outcome_encoded'] = encoder.fit_transform(diabetes_df['Outcome'])
-
-# 3. Now you can remap the values in the 'Outcome_encoded' column
-    diabetes_df['Outcome_encoded'] = diabetes_df['Outcome_encoded'].map({0: 1, 1: 0})
 
     # Mapping of the Iris species and their encoded equivalent
 
