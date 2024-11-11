@@ -112,50 +112,6 @@ species_list = ['No Diabetes', 'Diabetes']
 
 # Plots
 
-# `key` parameter is used to update the plot when the page is refreshed
-
-def pie_chart(column, width, height, key):
-
-    # Generate a pie chart
-    pie_chart = px.pie(diabetes_df, names=diabetes_df[column].unique(), values=diabetes_df[column].value_counts().values)
-
-    # Adjust the height and width
-    pie_chart.update_layout(
-        width=width,  # Set the width
-        height=height  # Set the height
-    )
-
-    st.plotly_chart(pie_chart, use_container_width=True,  key=f"pie_chart_{key}")
-
-def scatter_plot(column, width, height, key):
-
-    # Generate a scatter plot
-    scatter_plot = px.scatter(diabetes_df, x=diabetes_df['species'], y=diabetes_df[column])
-
-    # Adjust the height and width
-    scatter_plot.update_layout(
-        width=width,  # Set the width
-        height=height  # Set the height
-    )
-
-    st.plotly_chart(scatter_plot, use_container_width=True, key=f"scatter_plot_{key}")
-
-def pairwise_scatter_plot(key):
-    # Generate a pairwise scatter plot matrix
-    scatter_matrix = px.scatter_matrix(
-        diabetes_df,
-        dimensions=diabetes_df.columns[:-1],  # Exclude the species column from dimensions
-        color='species',  # Color by species
-    )
-
-    # Adjust the layout
-    scatter_matrix.update_layout(
-        width=500,  # Set the width
-        height=500  # Set the height
-    )
-
-    st.plotly_chart(scatter_matrix, use_container_width=True, key=f"pairwise_scatter_plot_{key}")
-
 def feature_importance_plot(feature_importance_df, width, height, key):
     # Generate a bar plot for feature importances
     feature_importance_fig = px.bar(
@@ -251,90 +207,7 @@ elif st.session_state.page_selection == "eda":
                 ''')
 
 
-        st.markdown('#### Class Distribution')
-        pie_chart("species", 500, 350, 1)
 
-    with col[1]:
-        st.markdown('#### Sepal Length by Species')
-        scatter_plot("sepal_length", 500, 300, 1)
-
-        st.markdown('#### Sepal Width by Species')
-        scatter_plot("sepal_width", 500, 300, 2)
-        
-    with col[2]:
-        st.markdown('#### Petal Length by Species')
-        scatter_plot("petal_length", 500, 300, 3)
-
-        st.markdown('#### Petal Width by Species')
-        scatter_plot("petal_width", 500, 300, 4)
-
-    st.markdown('#### Pairwise Scatter Plot Matrix')
-    pairwise_scatter_plot(1)
-
-    # Insights Section
-    st.header("💡 Insights")
-
-    st.markdown('#### Class Distribution')
-    pie_chart("species", 600, 500, 2)
-
-    st.markdown("""
-                
-    Based on the results we can see that there's a **balanced distribution** of the `3 Iris flower species`. With this in mind, we don't need to perform any pre-processing techniques anymore to balance the classes since it's already balanced.
-         
-    """)
-
-    st.markdown('#### Sepal Length by Species')
-    scatter_plot("sepal_length", 600, 500, 5)
-
-    st.markdown("""
-
-    By using a **scatter plot** to visualize the **sepal length** associated with each iris species in the dataset. We can see that *there's a substantial difference* between the sepal length of each classes, indicating that this attribute of Iris species do vary.  
-
-    However, it is important to note that there are some **outliers** which overlaps with other Iris species which may affect the model's ability to classify each species.
-         
-    """)
-
-    st.markdown('#### Sepal Width by Species')
-    scatter_plot("sepal_width", 600, 500, 6)
-
-    st.markdown("""
-
-    Using a scatter plot again for the **sepal width**, results show that the sepal width of each Iris species do vary but outliers still exist.
-         
-    """)
-    
-    st.markdown('#### Petal Length by Species')
-    scatter_plot("petal_length", 600, 500, 7)
-
-    st.markdown("""
-
-    Another scatter plot for the **Petal Length** highlights the difference between the petal length of the Iris species. Outliers does not deviate that much and overlapping is fairly low especially for *Iris Setosa*.
-         
-    """)
-
-    st.markdown('#### Petal Width by Species')
-    scatter_plot("petal_width", 600, 500, 8)
-
-    st.markdown("""
-
-    Lastly, the scatter plot for the **Petal Width** depicts a clear difference between the Iris flower's Petal Width based on the 3 species. However, there's an overlap of values between **Iris Versicolor** and **Iris Virginica** which might affect the training of our classification model.
-         
-    """)
-
-    st.markdown('#### Pairwise Scatter Plot Matrix')
-    pairwise_scatter_plot(2)
-
-    st.markdown("""
-
-    To highlight the *differences* and *overlaps* between Iris species' features, we now use a **Pairwise Scatter Plot Matrix** from Seaborn library to observe patterns, separability, and correlations between feature pairs of different Iris species. The results highlight the differences between Iris species' features.  
-
-    Based on the results, **Iris Setosa** forms a distinct cluster separate from the other 2 species (Versicolor and Virginica) in terms of petal length and petal width. However, in terms of sepal width and sepal length there's a clear overlap with the other 2 species.  
-
-    **Iris Versicolor** on the other hand shows a clear overlap with Iris Virginica's features especially in terms of *sepal length*, *sepal width*, *petal length*, and *petal width*. It is also worth noting that Iris Versicolor shows no overlap with Iris setosa in terms of *petal length* and *petal width*.
-
-    Lastly, **Iris Virginica's** features tend to overlap with the other 2 species in terms of *sepal length* and *sepal width*. There's a distinct overlap as well with Iris Versicolor's *petal length* and *petal width*.  
-         
-    """)
 
 # Data Cleaning Page
 elif st.session_state.page_selection == "data_cleaning":
