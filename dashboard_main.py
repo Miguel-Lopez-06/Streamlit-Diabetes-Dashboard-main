@@ -208,9 +208,24 @@ elif st.session_state.page_selection == "eda":
 
     diabetes_df['Outcome'].unique()
 
-    diabetes_df['Outcome'].value_counts()
+    Outcome_counts = diabetes_df['Outcome'].value_counts()
+    print(Outcome_counts)
 
+    Outcome_counts = diabetes_df['Outcome'].value_counts()
+    Outcome_counts_list = Outcome_counts.tolist()
+    print(Outcome_counts_list)
+
+    Outcome_list = diabetes_df['Outcome'].unique().tolist()
+    print(Outcome_list)
+
+    def pie_chart_Outcome():
+
+    plt.pie(Outcome_counts_list, labels=Outcome_list, autopct='%1.1f%%')
+    plt.title('Pie Chart of Outcome')
+    st.pyplot(plt)
+    plt.clf()
     
+
 # Data Cleaning Page
 elif st.session_state.page_selection == "data_cleaning":
     st.header("🧼 Data Cleaning and Data Pre-processing")
