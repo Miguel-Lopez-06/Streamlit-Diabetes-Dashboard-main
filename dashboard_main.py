@@ -81,10 +81,10 @@ with st.sidebar:
     # Project Details
     st.subheader("Abstract")
     st.markdown("A Streamlit dashboard highlighting the results of a training two classification models using the Iris flower dataset from Kaggle.")
-    st.markdown("📊 [Dataset](https://www.kaggle.com/datasets/arshid/iris-flower-dataset)")
-    st.markdown("📗 [Google Colab Notebook](https://colab.research.google.com/drive/1KJDBrx3akSPUW42Kbeepj64ZisHFD-NV?usp=sharing)")
-    st.markdown("🐙 [GitHub Repository](https://github.com/Zeraphim/Streamlit-Iris-Classification-Dashboard)")
-    st.markdown("by: [`AM7-Group 6`](https://jcdiamante.com)")
+    st.markdown("📊 [Dataset](https://www.kaggle.com/datasets/mathchi/diabetes-data-set)")
+    st.markdown("📗 [Google Colab Notebook](https://colab.research.google.com/drive/1UWI3jhR9aK2h7xXVTs4qAiTrXt3dyOSu?usp=sharing)")
+    st.markdown("🐙 [GitHub Repository](https://github.com/Miguel-Lopez-06/Streamlit-Diabetes-Dashboard-main)")
+    st.markdown("by: [`AM7-Group 6`](https://github.com/Miguel-Lopez-06/Streamlit-Diabetes-Dashboard-main)")
 
 # -------------------------
 
