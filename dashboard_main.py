@@ -645,6 +645,7 @@ elif st.session_state.page_selection == "machine_learning":
 
     st.markdown("This **Tree Plot** shows a single tree from our Random Forest Regressor model.")
 
+
 # Prediction Page
 elif  st.session_state.page_selection == "prediction":
     st.header(" Prediction")
@@ -661,7 +662,7 @@ elif  st.session_state.page_selection == "prediction":
             show_classes = st.checkbox('Show All Classes')
             show_setosa = st.checkbox('Show Setosa')
             show_versicolor = st.checkbox('Show Versicolor')
-            show_virginica = st.checkbox('Show Virginica')
+            
 
             clear_results = st.button('Clear Results', key='clear_results')
 
