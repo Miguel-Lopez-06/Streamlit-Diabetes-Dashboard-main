@@ -19,10 +19,12 @@ import plotly.express as px
 from sklearn.model_selection import train_test_split
 from sklearn.tree import DecisionTreeClassifier
 from sklearn.ensemble import RandomForestRegressor
-from sklearn.metrics import accuracy_score
+from sklearn.linear_model import LogisticRegression
+from sklearn.metrics import accuracy_score, confusion_matrix, roc_curve, auc
 from sklearn import tree
 from sklearn.preprocessing import LabelEncoder
 from sklearn.tree import plot_tree
+from sklearn.utils import resample
 
 # Importing Models
 import joblib
