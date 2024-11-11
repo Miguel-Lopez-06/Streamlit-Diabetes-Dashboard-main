@@ -115,7 +115,7 @@ species_list = ['No Diabetes', 'Diabetes']
 def pie_chart(column, width, height, key):
 
     # Generate a pie chart
-    pie_chart = px.pie(iris_df, names=iris_df[column].unique(), values=iris_df[column].value_counts().values)
+    pie_chart = px.pie(diabetes_df, names=diabetes_df[column].unique(), values=diabetes_df[column].value_counts().values)
 
     # Adjust the height and width
     pie_chart.update_layout(
@@ -128,7 +128,7 @@ def pie_chart(column, width, height, key):
 def scatter_plot(column, width, height, key):
 
     # Generate a scatter plot
-    scatter_plot = px.scatter(iris_df, x=iris_df['species'], y=iris_df[column])
+    scatter_plot = px.scatter(diabetes_df, x=diabetes_df['species'], y=diabetes_df[column])
 
     # Adjust the height and width
     scatter_plot.update_layout(
@@ -141,8 +141,8 @@ def scatter_plot(column, width, height, key):
 def pairwise_scatter_plot(key):
     # Generate a pairwise scatter plot matrix
     scatter_matrix = px.scatter_matrix(
-        iris_df,
-        dimensions=iris_df.columns[:-1],  # Exclude the species column from dimensions
+        diabetes_df,
+        dimensions=diabetes_df.columns[:-1],  # Exclude the species column from dimensions
         color='species',  # Color by species
     )
 
@@ -348,9 +348,9 @@ elif st.session_state.page_selection == "data_cleaning":
 
     encoder = LabelEncoder()
 
-    iris_df['species_encoded'] = encoder.fit_transform(iris_df['species'])
+    diabetes_df['species_encoded'] = encoder.fit_transform(diabetes_df['species'])
 
-    st.dataframe(iris_df.head(), use_container_width=True, hide_index=True)
+    st.dataframe(diabetes_df.head(), use_container_width=True, hide_index=True)
 
     st.markdown("""
 
@@ -360,8 +360,8 @@ elif st.session_state.page_selection == "data_cleaning":
 
     # Mapping of the Iris species and their encoded equivalent
 
-    unique_species = iris_df['species'].unique()
-    unique_species_encoded = iris_df['species_encoded'].unique()
+    unique_species = diabetes_df['species'].unique()
+    unique_species_encoded = diabetes_df['species_encoded'].unique()
 
     # Create a new DataFrame
     species_mapping_df = pd.DataFrame({'Species': unique_species, 'Species Encoded': unique_species_encoded})
@@ -693,9 +693,9 @@ elif  st.session_state.page_selection == "prediction":
             st.markdown(f'The predicted Iris species is: `{classes_list[rfr_prediction[0]]}`')
 
     # Create 3 Data Frames containing  5 rows for each species
-    setosa_samples = diabtetes_df[iris_df["species"] == "Iris-setosa"].head(5)
-    versicolor_samples = diabetes_df[iris_df["species"] == "Iris-versicolor"].head(5)
-    virginica_samples = diabetes_df[iris_df["species"] == "Iris-virginica"].head(5)
+    setosa_samples = diabetes_df[diabetes_df["species"] == "Iris-setosa"].head(5)
+    versicolor_samples = diabetes_df[diabetes_df["species"] == "Iris-versicolor"].head(5)
+    virginica_samples = diabetes_df[diabetes_df["species"] == "Iris-virginica"].head(5)
 
     if show_dataset:
         # Display the dataset
@@ -724,11 +724,6 @@ elif  st.session_state.page_selection == "prediction":
         # Display the Iris-versicolor samples
         st.subheader("Iris-versicolor Samples")
         st.dataframe(versicolor_samples, use_container_width=True, hide_index=True)
-
-    if show_virginica:
-        # Display the Iris-virginica samples
-        st.subheader("Iris-virginica Samples")
-        st.dataframe(virginica_samples, use_container_width=True, hide_index=True)
 
 # Conclusions Page
 elif st.session_state.page_selection == "conclusion":
