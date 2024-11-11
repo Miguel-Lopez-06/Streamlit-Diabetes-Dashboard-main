@@ -210,7 +210,25 @@ elif st.session_state.page_selection == "eda":
 
     diabetes_df['Outcome'].value_counts()
 
-   
+     # Separate majority and minority classes
+    majority_class = diabetes_df[diabetes_df['Outcome'] == 'No Diabetes']
+    minority_class = diabetes_df[diabetes_df['Outcome'] == 'Diabetes']
+
+# Check the lengths to confirm they are as expected
+    print("Majority class size:", len(majority_class))
+    print("Minority class size:", len(minority_class))
+
+# Upsample minority class
+    minority_upsampled = resample(minority_class,
+                              replace=True,       # sample with replacement
+                              n_samples=len(majority_class),  # match majority count
+                              random_state=42)    # reproducible results
+
+# Combine majority class with upsampled minority class
+    balanced_df = pd.concat([majority_class, minority_upsampled])
+
+# Display new class counts
+    balanced_df['Outcome'].value_counts()
 
 
 # Data Cleaning Page
