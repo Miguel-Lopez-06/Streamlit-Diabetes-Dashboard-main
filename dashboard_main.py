@@ -257,16 +257,15 @@ elif st.session_state.page_selection == "data_cleaning":
     st.subheader("Train-Test Split")
 
     # Select features and target variable
-    features = ['sepal_length', 'sepal_width', 'petal_length', 'petal_width']
+    features = ['Pregnancies', 'Glucose', 'BloodPressure', 'SkinThickness', 'Insulin', 'BMI', 'DiabetesPedigreeFunction', 'Age']
     X = diabetes_df[features]
-    y = diabetes_df['species_encoded']
+    y = diabetes_df['Outcome_encoded']
 
     st.code("""
 
-    # Select features and target variable
-    features = ['sepal_length', 'sepal_width', 'petal_length', 'petal_width']
-    X = iris_df[features]
-    y = iris_df['species_encoded']
+    features = ['Pregnancies', 'Glucose', 'BloodPressure', 'SkinThickness', 'Insulin', 'BMI', 'DiabetesPedigreeFunction', 'Age']
+    X = diabetes_df[features]
+    y = diabetes_df['Outcome_encoded']
 
             
     """)
