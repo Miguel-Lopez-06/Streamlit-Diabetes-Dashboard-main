@@ -222,7 +222,7 @@ elif st.session_state.page_selection == "data_cleaning":
 
     encoder = LabelEncoder()
 
-    diabetes_df['species_encoded'] = encoder.fit_transform(diabetes_df['species'])
+    diabetes_df['Outcome_encoded'] = encoder.fit_transform(diabetes_df['Outcome'])
 
     st.dataframe(diabetes_df.head(), use_container_width=True, hide_index=True)
 
@@ -234,14 +234,14 @@ elif st.session_state.page_selection == "data_cleaning":
 
     # Mapping of the Iris species and their encoded equivalent
 
-    unique_species = diabetes_df['species'].unique()
-    unique_species_encoded = diabetes_df['species_encoded'].unique()
+    unique_Outcome = diabetes_df['Outcome'].unique()
+    unique_Outcome_encoded = diabetes_df['Outcome_encoded'].unique()
 
     # Create a new DataFrame
-    species_mapping_df = pd.DataFrame({'Species': unique_species, 'Species Encoded': unique_species_encoded})
+    Outcome_mapping_df = pd.DataFrame({'Outcome': unique_Outcome, 'Outcome Encoded': unique_Outcome_encoded})
 
     # Display the DataFrame
-    st.dataframe(species_mapping_df, use_container_width=True, hide_index=True)
+    st.dataframe(Outcome_mapping_df, use_container_width=True, hide_index=True)
 
     st.markdown("""
 
