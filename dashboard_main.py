@@ -394,9 +394,9 @@ elif st.session_state.page_selection == "machine_learning":
     """)
         
 
-    # Random Forest Regressor
+    # Logistic Regression
 
-    st.subheader("Random Forest Regressor")
+    st.subheader("Logistic Regression")
 
     st.markdown("""
 
@@ -423,7 +423,7 @@ elif st.session_state.page_selection == "machine_learning":
     with col_rfr_fig[2]:
         st.write(' ')
 
-    st.subheader("Training the Random Forest Regressor model")
+    st.subheader("Training the Logistic Regression model")
 
     st.code("""
 
