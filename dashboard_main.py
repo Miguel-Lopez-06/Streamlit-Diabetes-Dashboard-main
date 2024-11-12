@@ -581,8 +581,8 @@ elif  st.session_state.page_selection == "prediction":
             st.markdown(f'The predicted Diabetes outcome is: `{classes_list[log_prediction[0]]}`')
 
     # Create 3 Data Frames containing  5 rows for each species
-    Diabetes_samples = diabetes_df[diabetes_df["outcome"] == "Diabetes"].head(5)
-    No_Diabetes_samples = diabetes_df[diabetes_df["outcome"] == "No Diabetes"].head(5)
+    Diabetes_samples = diabetes_df[diabetes_df["Outcome"] == "Diabetes"].head(5)
+    No_Diabetes_samples = diabetes_df[diabetes_df["Outcome"] == "No Diabetes"].head(5)
     
 
     if show_dataset:
