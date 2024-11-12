@@ -552,7 +552,7 @@ elif  st.session_state.page_selection == "prediction":
             dt_prediction = dt_classifier.predict(dt_input_data)
             
             # Display the prediction result
-            st.markdown(f'The predicted Diabetes outcome is: `{classes_list[dt_prediction[0]]}`')
+            st.markdown(f'The predicted outcome is: `{classes_list[dt_prediction[0]]}`')
 
     with col_pred[2]:
         st.markdown("#### Logistic Regression")
@@ -578,7 +578,7 @@ elif  st.session_state.page_selection == "prediction":
             log_prediction = log_reg.predict(log_input_data)
             
             # Display the prediction result
-            st.markdown(f'The predicted Diabetes outcome is: `{classes_list[log_prediction[0]]}`')
+            st.markdown(f'The predicted outcome is: `{classes_list[log_prediction[0]]}`')
 
     # Create 3 Data Frames containing  5 rows for each species
     Diabetes_samples = diabetes_df[diabetes_df["Outcome"] == "Diabetes"].head(5)
