@@ -570,7 +570,7 @@ elif  st.session_state.page_selection == "prediction":
         classes_list = ['No Diabetes', 'Diabetes']
         
         # Button to detect the Iris species
-        if st.button('Detect', key='dt_detect'):
+        if st.button('Detect', key='log_detect'):
             # Prepare the input data for prediction
             log_input_data = [[log_Pregnancies, log_Glucose, log_BloodPressure, log_SkinThickness, log_Insulin, log_BMI, log_DiabetesPedigreeFunction, log_Age]]
             
