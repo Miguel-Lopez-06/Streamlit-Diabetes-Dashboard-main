@@ -91,11 +91,11 @@ with st.sidebar:
     st.markdown("🐙 [GitHub Repository](https://github.com/Miguel-Lopez-06/Streamlit-Diabetes-Dashboard-main)")
     st.markdown("by: [`AM7-Group 6`](https://github.com/Miguel-Lopez-06/Streamlit-Diabetes-Dashboard-main)")
     st.subheader('Members:')
-    st.write('*   ')
-    st.write('*   ')
-    st.write('*   ')
-    st.write('*   ')
-    st.write('*   ')
+    st.write('Lu, Angel Michael   ')
+    st.write('Libres, Francis Joseph   ')
+    st.write('Lopez, John Finees Miguel   ')
+    st.write('Molina, Juan Miguel   ')
+    st.write('Macaraeg, Vincent Angelo   ')
 
 
 # -------------------------
