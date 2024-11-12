@@ -456,22 +456,22 @@ elif st.session_state.page_selection == "machine_learning":
 
     st.code("""
 
-    random_forest_feature_importance = pd.Series(rfr_classifier.feature_importances_, index=X_train.columns)
+    logistic_regression_feature_importance = pd.Series(log_reg.coef_[0], index=X_train.columns)
 
-    random_forest_feature_importance
+    logistic_regression_feature_importance
     
     """)
 
-    rfr_feature_importance = {
-        'Feature': ['sepal_length', 'sepal_width', 'petal_length', 'petal_width'],
-        'Importance': [0.005930, 0.012981, 0.585738, 0.395351]
+    logistic_regression_feature_importance = {
+        'Feature': ['Pregnancies', 'Glucose', 'BloodPressure', 'SkinThickness', 'Insulin', 'BMI', 'DiabetesPedigreeFunction', 'Age'],
+        'Importance': [0.027255, 0.356937, 0.097345, 0.061428, 0.039552, 0.186479, 0.096871, 0.134134]
     }
 
-    rfr_feature_importance_df = pd.DataFrame(rfr_feature_importance)
+    logistic_regression_feature_importance_df = pd.DataFrame(logistic_regression_feature_importance)
 
-    st.dataframe(rfr_feature_importance_df, use_container_width=True, hide_index=True)
+    st.dataframe(logistic_regression_feature_importance_df, use_container_width=True, hide_index=True)
 
-    feature_importance_plot(rfr_feature_importance_df, 500, 500, 2)
+    feature_importance_plot(logistic_regression_feature_importance_df, 500, 500, 2)
 
     st.markdown("""
 
