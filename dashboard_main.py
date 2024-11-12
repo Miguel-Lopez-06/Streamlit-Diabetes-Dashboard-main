@@ -105,7 +105,7 @@ diabetes_df['Outcome'] = diabetes_df['Outcome'].map({1: 'Diabetes', 0: 'No Diabe
 
 dt_classifier = joblib.load('assets/models/decision_tree_model.joblib')
 log_reg = joblib.load('assets/models/logistic_regression_model.joblib')
-rfr_classifier = joblib.load('assets/models/random_forest_regressor.joblib')
+
 
 features = ['Pregnancies', 'Glucose', 'BloodPressure', 'SkinThickness', 'Insulin', 'BMI', 'DiabetesPedigreeFunction', 'Age']
 outcome_list = ['Diabetes', 'No Diabetes']
