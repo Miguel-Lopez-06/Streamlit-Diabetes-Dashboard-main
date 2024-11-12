@@ -528,7 +528,7 @@ elif  st.session_state.page_selection == "prediction":
                 st.session_state.clear = True
 
     with col_pred[1]:
-        st.markdown("#### 🌲 Decision Tree Classifier")
+        st.markdown("#### Decision Tree Classifier")
         
         # Input boxes for the features
         dt_sepal_length = st.number_input('Sepal Length', min_value=0.0, max_value=10.0, step=0.1, key='dt_sepal_length', value=0.0 if st.session_state.clear else st.session_state.get('dt_sepal_length', 0.0))
@@ -550,7 +550,7 @@ elif  st.session_state.page_selection == "prediction":
             st.markdown(f'The predicted Iris species is: `{classes_list[dt_prediction[0]]}`')
 
     with col_pred[2]:
-        st.markdown("#### 🌲🌲🌲 Random Forest Regressor")
+        st.markdown("#### Logistic Regression")
 
         # Input boxes for the features
         rfr_sepal_length = st.number_input('Sepal Length', min_value=0.0, max_value=10.0, step=0.1, key='rfr_sepal_length', value=0.0 if st.session_state.clear else st.session_state.get('rfr_sepal_length', 0.0))
@@ -574,7 +574,7 @@ elif  st.session_state.page_selection == "prediction":
     # Create 3 Data Frames containing  5 rows for each species
     setosa_samples = diabetes_df[diabetes_df["species"] == "Iris-setosa"].head(5)
     versicolor_samples = diabetes_df[diabetes_df["species"] == "Iris-versicolor"].head(5)
-    virginica_samples = diabetes_df[diabetes_df["species"] == "Iris-virginica"].head(5)
+    
 
     if show_dataset:
         # Display the dataset
@@ -589,10 +589,6 @@ elif  st.session_state.page_selection == "prediction":
         # Iris-versicolor Samples
         st.subheader("Iris-versicolor Samples")
         st.dataframe(versicolor_samples, use_container_width=True, hide_index=True)
-
-        # Iris-virginica Samples
-        st.subheader("Iris-virginica Samples")
-        st.dataframe(virginica_samples, use_container_width=True, hide_index=True)
 
     if show_setosa:
         # Display the Iris-setosa samples
