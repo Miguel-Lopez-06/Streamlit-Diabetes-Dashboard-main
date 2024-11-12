@@ -519,7 +519,7 @@ elif  st.session_state.page_selection == "prediction":
             show_dataset = st.checkbox('Show Dataset')
             show_classes = st.checkbox('Show All Classes')
             show_Diabetes = st.checkbox('Show Diabetes')
-            show_versicolor = st.checkbox('Show No Diabetes')
+            show_No_Diabetes = st.checkbox('Show No Diabetes')
             
 
             clear_results = st.button('Clear Results', key='clear_results')
@@ -577,8 +577,8 @@ elif  st.session_state.page_selection == "prediction":
             st.markdown(f'The predicted Iris species is: `{classes_list[rfr_prediction[0]]}`')
 
     # Create 3 Data Frames containing  5 rows for each species
-    setosa_samples = diabetes_df[diabetes_df["species"] == "Iris-setosa"].head(5)
-    versicolor_samples = diabetes_df[diabetes_df["species"] == "Iris-versicolor"].head(5)
+    Diabetes_samples = diabetes_df[diabetes_df["outcome"] == "Diabetes"].head(5)
+    No_Diabetes_samples = diabetes_df[diabetes_df["outcome"] == "No Diabetes"].head(5)
     
 
     if show_dataset:
@@ -588,22 +588,22 @@ elif  st.session_state.page_selection == "prediction":
 
     if show_classes:
         # Iris-setosa Samples
-        st.subheader("Iris-setosa Samples")
-        st.dataframe(setosa_samples, use_container_width=True, hide_index=True)
+        st.subheader("Diabetes Samples")
+        st.dataframe(Diabetes_samples, use_container_width=True, hide_index=True)
 
         # Iris-versicolor Samples
-        st.subheader("Iris-versicolor Samples")
-        st.dataframe(versicolor_samples, use_container_width=True, hide_index=True)
+        st.subheader("No Diabetes Samples")
+        st.dataframe(No_Diabetes_samples, use_container_width=True, hide_index=True)
 
     if show_Diabetes:
         # Display the Iris-setosa samples
-        st.subheader("Iris-setosa Samples")
+        st.subheader("Diabetes Samples")
         st.dataframe(setosa_samples, use_container_width=True, hide_index=True)
 
-    if show_versicolor:
+    if show_No_Diabetes:
         # Display the Iris-versicolor samples
-        st.subheader("Iris-versicolor Samples")
-        st.dataframe(versicolor_samples, use_container_width=True, hide_index=True)
+        st.subheader("No Diabetes Samples")
+        st.dataframe(No_Diabetes_samples, use_container_width=True, hide_index=True)
 
 # Conclusions Page
 elif st.session_state.page_selection == "conclusion":
