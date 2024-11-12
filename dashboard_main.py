@@ -108,7 +108,7 @@ log_reg = joblib.load('assets/models/logistic_regression_model.joblib')
 rfr_classifier = joblib.load('assets/models/random_forest_regressor.joblib')
 
 features = ['Pregnancies', 'Glucose', 'BloodPressure', 'SkinThickness', 'Insulin', 'BMI', 'DiabetesPedigreeFunction', 'Age']
-species_list = ['No Diabetes', 'Diabetes']
+outcome_list = ['Diabetes', 'No Diabetes']
 
 # -------------------------
 
