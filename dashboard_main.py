@@ -427,8 +427,8 @@ elif st.session_state.page_selection == "machine_learning":
 
     st.code("""
 
-    rfr_classifier = RandomForestRegressor()
-    rfr_classifier.fit(X_train, y_train)     
+    log_reg = LogisticRegression(max_iter=200)
+    log_reg.fit(X_train, y_train)     
             
     """)
 
@@ -436,8 +436,9 @@ elif st.session_state.page_selection == "machine_learning":
 
     st.code("""
 
-    train_accuracy = rfr_classifier.score(X_train, y_train) #train daTa
-    test_accuracy = rfr_classifier.score(X_test, y_test) #test daTa
+    # Evaluate the model
+    train_accuracy = log_reg.score(X_train, y_train) #train daTa
+    test_accuracy = log_reg.score(X_test, y_test) #test daTa
 
     print(f'Train Accuracy: {train_accuracy * 100:.2f}%')
     print(f'Test Accuracy: {test_accuracy * 100:.2f}%')
@@ -446,8 +447,8 @@ elif st.session_state.page_selection == "machine_learning":
 
     st.write("""
 
-    **Train Accuracy:** 98.58%\n
-    **Test Accuracy:** 99.82%      
+    **Train Accuracy:** 78.40%\n
+    **Test Accuracy:** 73.59%      
              
     """)
 
