@@ -506,7 +506,7 @@ elif st.session_state.page_selection == "machine_learning":
 
 # Prediction Page
 elif  st.session_state.page_selection == "prediction":
-    st.header(" Prediction")
+    st.header("Prediction")
 
     col_pred = st.columns((1.5, 3, 3), gap='medium')
 
