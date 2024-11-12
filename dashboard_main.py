@@ -532,12 +532,12 @@ elif  st.session_state.page_selection == "prediction":
         st.markdown("#### Decision Tree Classifier")
         
         # Input boxes for the features
-        dt_Pregnancies = st.number_input('Pregnancies', min_value=0.0, max_value=10.0, step=0.1, key='Pregnancies', value=0.0 if st.session_state.clear else st.session_state.get('Pregnancies', 0.0))
-        dt_Glucose = st.number_input('Glucose', min_value=0.0, max_value=10.0, step=0.1, key='Glucose', value=0.0 if st.session_state.clear else st.session_state.get('dt_Glucose', 0.0))
-        dt_BloodPressure = st.number_input('BloodPressure', min_value=0.0, max_value=10.0, step=0.1, key='BloodPressure', value=0.0 if st.session_state.clear else st.session_state.get('dt_BloodPressure', 0.0))
+        dt_Pregnancies = st.number_input('Pregnancies', min_value=0.0, max_value=10.0, step=0.1, key='dt_Pregnancies', value=0.0 if st.session_state.clear else st.session_state.get('dt_Pregnancies', 0.0))
+        dt_Glucose = st.number_input('Glucose', min_value=0.0, max_value=10.0, step=0.1, key='dt_Glucose', value=0.0 if st.session_state.clear else st.session_state.get('dt_Glucose', 0.0))
+        dt_BloodPressure = st.number_input('BloodPressure', min_value=0.0, max_value=10.0, step=0.1, key='dt_BloodPressure', value=0.0 if st.session_state.clear else st.session_state.get('dt_BloodPressure', 0.0))
         dt_SkinThickness = st.number_input('SkinThickness', min_value=0.0, max_value=10.0, step=0.1, key='dt_SkinThickness', value=0.0 if st.session_state.clear else st.session_state.get('dt_SkinThickness', 0.0))
-        dt_Insulin = st.number_input('Insulin', min_value=0.0, max_value=10.0, step=0.1, key='Insulin', value=0.0 if st.session_state.clear else st.session_state.get('Insulin', 0.0))
-        dt_BMI = st.number_input('BMI', min_value=0.0, max_value=10.0, step=0.1, key='BMI', value=0.0 if st.session_state.clear else st.session_state.get('dt_BMI', 0.0))
+        dt_Insulin = st.number_input('Insulin', min_value=0.0, max_value=10.0, step=0.1, key='dt_Insulin', value=0.0 if st.session_state.clear else st.session_state.get('dt_Insulin', 0.0))
+        dt_BMI = st.number_input('BMI', min_value=0.0, max_value=10.0, step=0.1, key='dt_BMI', value=0.0 if st.session_state.clear else st.session_state.get('dt_BMI', 0.0))
         dt_DiabetesPedigreeFunction = st.number_input('DiabetesPedigreeFunction', min_value=0.0, max_value=10.0, step=0.1, key='dt_DiabetesPedigreeFunction', value=0.0 if st.session_state.clear else st.session_state.get('dt_DiabetesPedigreeFunction', 0.0))
         dt_Age = st.number_input('Age', min_value=0.0, max_value=10.0, step=0.1, key='dt_Age', value=0.0 if st.session_state.clear else st.session_state.get('dt_Age', 0.0))
 
@@ -557,24 +557,28 @@ elif  st.session_state.page_selection == "prediction":
     with col_pred[2]:
         st.markdown("#### Logistic Regression")
 
-        # Input boxes for the features
-        rfr_sepal_length = st.number_input('Sepal Length', min_value=0.0, max_value=10.0, step=0.1, key='rfr_sepal_length', value=0.0 if st.session_state.clear else st.session_state.get('rfr_sepal_length', 0.0))
-        rfr_sepal_width = st.number_input('Sepal Width', min_value=0.0, max_value=10.0, step=0.1, key='rfr_sepal_width', value=0.0 if st.session_state.clear else st.session_state.get('rfr_sepal_width', 0.0))
-        rfr_petal_width = st.number_input('Petal Width', min_value=0.0, max_value=10.0, step=0.1, key='rfr_petal_width', value=0.0 if st.session_state.clear else st.session_state.get('rfr_petal_width', 0.0))
-        rfr_petal_length = st.number_input('Petal Length', min_value=0.0, max_value=10.0, step=0.1, key='rfr_petal_length', value=0.0 if st.session_state.clear else st.session_state.get('rfr_petal_length', 0.0))
+         # Input boxes for the features
+        log_Pregnancies = st.number_input('Pregnancies', min_value=0.0, max_value=10.0, step=0.1, key='log_Pregnancies', value=0.0 if st.session_state.clear else st.session_state.get('log_Pregnancies', 0.0))
+        log_Glucose = st.number_input('Glucose', min_value=0.0, max_value=10.0, step=0.1, key='log_Glucose', value=0.0 if st.session_state.clear else st.session_state.get('log_Glucose', 0.0))
+        log_BloodPressure = st.number_input('BloodPressure', min_value=0.0, max_value=10.0, step=0.1, key='log_BloodPressure', value=0.0 if st.session_state.clear else st.session_state.get('log_BloodPressure', 0.0))
+        log_SkinThickness = st.number_input('SkinThickness', min_value=0.0, max_value=10.0, step=0.1, key='log_SkinThickness', value=0.0 if st.session_state.clear else st.session_state.get('log_SkinThickness', 0.0))
+        log_Insulin = st.number_input('Insulin', min_value=0.0, max_value=10.0, step=0.1, key='log_Insulin', value=0.0 if st.session_state.clear else st.session_state.get('log_Insulin', 0.0))
+        log_BMI = st.number_input('BMI', min_value=0.0, max_value=10.0, step=0.1, key='log_BMI', value=0.0 if st.session_state.clear else st.session_state.get('log_BMI', 0.0))
+        log_DiabetesPedigreeFunction = st.number_input('DiabetesPedigreeFunction', min_value=0.0, max_value=10.0, step=0.1, key='log_DiabetesPedigreeFunction', value=0.0 if st.session_state.clear else st.session_state.get('log_DiabetesPedigreeFunction', 0.0))
+        log_Age = st.number_input('Age', min_value=0.0, max_value=10.0, step=0.1, key='log_Age', value=0.0 if st.session_state.clear else st.session_state.get('log_Age', 0.0))
 
-        classes_list = ['Iris-setosa', 'Iris-versicolor', 'Iris-virginica']
+        classes_list = ['No Diabetes', 'Diabetes']
         
         # Button to detect the Iris species
-        if st.button('Detect', key='rfr_detect'):
+        if st.button('Detect', key='dt_detect'):
             # Prepare the input data for prediction
-            rfr_input_data = [[rfr_sepal_width, rfr_sepal_length, rfr_petal_width, rfr_petal_length]]
+            log_input_data = [[log_Pregnancies, log_Glucose, log_BloodPressure, log_SkinThickness, log_Insulin, log_BMI, log_DiabetesPedigreeFunction, log_Age]]
             
             # Predict the Iris species
-            rfr_prediction = dt_classifier.predict(rfr_input_data)
+            log_prediction = log_reg.predict(log_input_data)
             
             # Display the prediction result
-            st.markdown(f'The predicted Iris species is: `{classes_list[rfr_prediction[0]]}`')
+            st.markdown(f'The predicted Diabetes outcome is: `{classes_list[log_prediction[0]]}`')
 
     # Create 3 Data Frames containing  5 rows for each species
     Diabetes_samples = diabetes_df[diabetes_df["outcome"] == "Diabetes"].head(5)
@@ -587,21 +591,21 @@ elif  st.session_state.page_selection == "prediction":
         st.dataframe(diabetes_df, use_container_width=True, hide_index=True)
 
     if show_classes:
-        # Iris-setosa Samples
+        # Diabetes Samples
         st.subheader("Diabetes Samples")
         st.dataframe(Diabetes_samples, use_container_width=True, hide_index=True)
 
-        # Iris-versicolor Samples
+        # No Diabetes Samples
         st.subheader("No Diabetes Samples")
         st.dataframe(No_Diabetes_samples, use_container_width=True, hide_index=True)
 
     if show_Diabetes:
-        # Display the Iris-setosa samples
+        # Display the Diabetes samples
         st.subheader("Diabetes Samples")
-        st.dataframe(setosa_samples, use_container_width=True, hide_index=True)
+        st.dataframe(Diabetes_samples, use_container_width=True, hide_index=True)
 
     if show_No_Diabetes:
-        # Display the Iris-versicolor samples
+        # Display the No Diabetes samples
         st.subheader("No Diabetes Samples")
         st.dataframe(No_Diabetes_samples, use_container_width=True, hide_index=True)
 
