@@ -517,8 +517,8 @@ elif  st.session_state.page_selection == "prediction":
         with st.expander('Options', expanded=True):
             show_dataset = st.checkbox('Show Dataset')
             show_classes = st.checkbox('Show All Classes')
-            show_setosa = st.checkbox('Show Setosa')
-            show_versicolor = st.checkbox('Show Versicolor')
+            show_setosa = st.checkbox('Show Diabetes')
+            show_versicolor = st.checkbox('Show No Diabetes')
             
 
             clear_results = st.button('Clear Results', key='clear_results')
