@@ -105,6 +105,7 @@ diabetes_df['Outcome'] = diabetes_df['Outcome'].map({1: 'Diabetes', 0: 'No Diabe
 
 dt_classifier = joblib.load('assets/models/decision_tree_model.joblib')
 log_reg = joblib.load('assets/models/logistic_regression_model.joblib')
+rfr_classifier = joblib.load('assets/models/random_forest_regressor.joblib')
 
 features = ['Pregnancies', 'Glucose', 'BloodPressure', 'SkinThickness', 'Insulin', 'BMI', 'DiabetesPedigreeFunction', 'Age']
 species_list = ['No Diabetes', 'Diabetes']
@@ -517,7 +518,7 @@ elif  st.session_state.page_selection == "prediction":
         with st.expander('Options', expanded=True):
             show_dataset = st.checkbox('Show Dataset')
             show_classes = st.checkbox('Show All Classes')
-            show_setosa = st.checkbox('Show Diabetes')
+            show_Diabetes = st.checkbox('Show Diabetes')
             show_versicolor = st.checkbox('Show No Diabetes')
             
 
@@ -536,7 +537,7 @@ elif  st.session_state.page_selection == "prediction":
         dt_petal_width = st.number_input('Petal Width', min_value=0.0, max_value=10.0, step=0.1, key='dt_petal_width', value=0.0 if st.session_state.clear else st.session_state.get('dt_petal_width', 0.0))
         dt_petal_length = st.number_input('Petal Length', min_value=0.0, max_value=10.0, step=0.1, key='dt_petal_length', value=0.0 if st.session_state.clear else st.session_state.get('dt_petal_length', 0.0))
 
-        classes_list = ['Iris-setosa', 'Iris-versicolor', 'Iris-virginica']
+        classes_list = ['No Diabetes', 'Diabetes']
         
         # Button to detect the Iris species
         if st.button('Detect', key='dt_detect'):
@@ -590,7 +591,7 @@ elif  st.session_state.page_selection == "prediction":
         st.subheader("Iris-versicolor Samples")
         st.dataframe(versicolor_samples, use_container_width=True, hide_index=True)
 
-    if show_setosa:
+    if show_Diabetes:
         # Display the Iris-setosa samples
         st.subheader("Iris-setosa Samples")
         st.dataframe(setosa_samples, use_container_width=True, hide_index=True)
