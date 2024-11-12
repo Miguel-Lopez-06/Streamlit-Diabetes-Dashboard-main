@@ -85,7 +85,7 @@ with st.sidebar:
 
     # Project Details
     st.subheader("Abstract")
-    st.markdown("A Streamlit dashboard highlighting the results of a training two classification models using the Iris flower dataset from Kaggle.")
+    st.markdown("A Streamlit dashboard highlighting the results of a training two classification models using the Diabetes dataset from Kaggle.")
     st.markdown("📊 [Dataset](https://www.kaggle.com/datasets/mathchi/diabetes-data-set)")
     st.markdown("📗 [Google Colab Notebook](https://colab.research.google.com/drive/1UWI3jhR9aK2h7xXVTs4qAiTrXt3dyOSu?usp=sharing)")
     st.markdown("🐙 [GitHub Repository](https://github.com/Miguel-Lopez-06/Streamlit-Diabetes-Dashboard-main)")
@@ -532,23 +532,27 @@ elif  st.session_state.page_selection == "prediction":
         st.markdown("#### Decision Tree Classifier")
         
         # Input boxes for the features
-        dt_sepal_length = st.number_input('Sepal Length', min_value=0.0, max_value=10.0, step=0.1, key='dt_sepal_length', value=0.0 if st.session_state.clear else st.session_state.get('dt_sepal_length', 0.0))
-        dt_sepal_width = st.number_input('Sepal Width', min_value=0.0, max_value=10.0, step=0.1, key='dt_sepal_width', value=0.0 if st.session_state.clear else st.session_state.get('dt_sepal_width', 0.0))
-        dt_petal_width = st.number_input('Petal Width', min_value=0.0, max_value=10.0, step=0.1, key='dt_petal_width', value=0.0 if st.session_state.clear else st.session_state.get('dt_petal_width', 0.0))
-        dt_petal_length = st.number_input('Petal Length', min_value=0.0, max_value=10.0, step=0.1, key='dt_petal_length', value=0.0 if st.session_state.clear else st.session_state.get('dt_petal_length', 0.0))
+        dt_Pregnancies = st.number_input('Pregnancies', min_value=0.0, max_value=10.0, step=0.1, key='Pregnancies', value=0.0 if st.session_state.clear else st.session_state.get('Pregnancies', 0.0))
+        dt_Glucose = st.number_input('Glucose', min_value=0.0, max_value=10.0, step=0.1, key='Glucose', value=0.0 if st.session_state.clear else st.session_state.get('dt_Glucose', 0.0))
+        dt_BloodPressure = st.number_input('BloodPressure', min_value=0.0, max_value=10.0, step=0.1, key='BloodPressure', value=0.0 if st.session_state.clear else st.session_state.get('dt_BloodPressure', 0.0))
+        dt_SkinThickness = st.number_input('SkinThickness', min_value=0.0, max_value=10.0, step=0.1, key='dt_SkinThickness', value=0.0 if st.session_state.clear else st.session_state.get('dt_SkinThickness', 0.0))
+        dt_Insulin = st.number_input('Insulin', min_value=0.0, max_value=10.0, step=0.1, key='Insulin', value=0.0 if st.session_state.clear else st.session_state.get('Insulin', 0.0))
+        dt_BMI = st.number_input('BMI', min_value=0.0, max_value=10.0, step=0.1, key='BMI', value=0.0 if st.session_state.clear else st.session_state.get('dt_BMI', 0.0))
+        dt_DiabetesPedigreeFunction = st.number_input('DiabetesPedigreeFunction', min_value=0.0, max_value=10.0, step=0.1, key='dt_DiabetesPedigreeFunction', value=0.0 if st.session_state.clear else st.session_state.get('dt_DiabetesPedigreeFunction', 0.0))
+        dt_Age = st.number_input('Age', min_value=0.0, max_value=10.0, step=0.1, key='dt_Age', value=0.0 if st.session_state.clear else st.session_state.get('dt_Age', 0.0))
 
         classes_list = ['No Diabetes', 'Diabetes']
         
         # Button to detect the Iris species
         if st.button('Detect', key='dt_detect'):
             # Prepare the input data for prediction
-            dt_input_data = [[dt_sepal_width, dt_sepal_length, dt_petal_width, dt_petal_length]]
+            dt_input_data = [[dt_Pregnancies, dt_Glucose, dt_BloodPressure, dt_SkinThickness, dt_Insulin, dt_BMI, dt_DiabetesPedigreeFunction, dt_Age]]
             
             # Predict the Iris species
             dt_prediction = dt_classifier.predict(dt_input_data)
             
             # Display the prediction result
-            st.markdown(f'The predicted Iris species is: `{classes_list[dt_prediction[0]]}`')
+            st.markdown(f'The predicted Diabetes outcome is: `{classes_list[dt_prediction[0]]}`')
 
     with col_pred[2]:
         st.markdown("#### Logistic Regression")
