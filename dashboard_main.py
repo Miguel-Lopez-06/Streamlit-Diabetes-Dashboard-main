@@ -85,11 +85,18 @@ with st.sidebar:
 
     # Project Details
     st.subheader("Abstract")
-    st.markdown("A Streamlit dashboard highlighting the results of a training two classification models using the Diabetes dataset from Kaggle.")
+    st.markdown("A Streamlit dashboard highlighting the results of training two classification models using the Diabetes dataset from Kaggle.")
     st.markdown("📊 [Dataset](https://www.kaggle.com/datasets/mathchi/diabetes-data-set)")
     st.markdown("📗 [Google Colab Notebook](https://colab.research.google.com/drive/1UWI3jhR9aK2h7xXVTs4qAiTrXt3dyOSu?usp=sharing)")
     st.markdown("🐙 [GitHub Repository](https://github.com/Miguel-Lopez-06/Streamlit-Diabetes-Dashboard-main)")
     st.markdown("by: [`AM7-Group 6`](https://github.com/Miguel-Lopez-06/Streamlit-Diabetes-Dashboard-main)")
+    st.subheader('Members:')
+    st.write('*   ')
+    st.write('*   ')
+    st.write('*   ')
+    st.write('*   ')
+    st.write('*   ')
+
 
 # -------------------------
 
