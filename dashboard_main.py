@@ -558,14 +558,14 @@ elif  st.session_state.page_selection == "prediction":
         st.markdown("#### Logistic Regression")
 
          # Input boxes for the features
-        log_Pregnancies = st.number_input('Pregnancies', min_value=0, max_value=10.0, step=0.1, key='log_Pregnancies', value=0.0 if st.session_state.clear else st.session_state.get('log_Pregnancies', 0.0))
-        log_Glucose = st.number_input('Glucose', min_value=0, max_value=10.0, step=0.1, key='log_Glucose', value=0.0 if st.session_state.clear else st.session_state.get('log_Glucose', 0.0))
-        log_BloodPressure = st.number_input('BloodPressure', min_value=0, max_value=10.0, step=0.1, key='log_BloodPressure', value=0.0 if st.session_state.clear else st.session_state.get('log_BloodPressure', 0.0))
-        log_SkinThickness = st.number_input('SkinThickness', min_value=0, max_value=10.0, step=0.1, key='log_SkinThickness', value=0.0 if st.session_state.clear else st.session_state.get('log_SkinThickness', 0.0))
-        log_Insulin = st.number_input('Insulin', min_value=0, max_value=10.0, step=0.1, key='log_Insulin', value=0.0 if st.session_state.clear else st.session_state.get('log_Insulin', 0.0))
-        log_BMI = st.number_input('BMI', min_value=0.0, max_value=100.0, step=0.1, key='log_BMI', value=0.0 if st.session_state.clear else st.session_state.get('log_BMI', 0.0))
-        log_DiabetesPedigreeFunction = st.number_input('DiabetesPedigreeFunction', min_value=0.000, max_value=10.000, step=0.1, key='log_DiabetesPedigreeFunction', value=0.0 if st.session_state.clear else st.session_state.get('log_DiabetesPedigreeFunction', 0.0))
-        log_Age = st.number_input('Age', min_value=0, max_value=10.0, step=0.1, key='log_Age', value=0.0 if st.session_state.clear else st.session_state.get('log_Age', 0.0))
+        log_Pregnancies = st.number_input('Pregnancies', min_value=0.0, max_value=10.0, step=0.1, key='log_Pregnancies', value=0.0 if st.session_state.clear else st.session_state.get('log_Pregnancies', 0.0))
+        log_Glucose = st.number_input('Glucose', min_value=0.0, max_value=10.0, step=0.1, key='log_Glucose', value=0.0 if st.session_state.clear else st.session_state.get('log_Glucose', 0.0))
+        log_BloodPressure = st.number_input('BloodPressure', min_value=0.0, max_value=10.0, step=0.1, key='log_BloodPressure', value=0.0 if st.session_state.clear else st.session_state.get('log_BloodPressure', 0.0))
+        log_SkinThickness = st.number_input('SkinThickness', min_value=0.0, max_value=10.0, step=0.1, key='log_SkinThickness', value=0.0 if st.session_state.clear else st.session_state.get('log_SkinThickness', 0.0))
+        log_Insulin = st.number_input('Insulin', min_value=0.0, max_value=10.0, step=0.1, key='log_Insulin', value=0.0 if st.session_state.clear else st.session_state.get('log_Insulin', 0.0))
+        log_BMI = st.number_input('BMI', min_value=0.0, max_value=10.0, step=0.1, key='log_BMI', value=0.0 if st.session_state.clear else st.session_state.get('log_BMI', 0.0))
+        log_DiabetesPedigreeFunction = st.number_input('DiabetesPedigreeFunction', min_value=0.0, max_value=10.0, step=0.1, key='log_DiabetesPedigreeFunction', value=0.0 if st.session_state.clear else st.session_state.get('log_DiabetesPedigreeFunction', 0.0))
+        log_Age = st.number_input('Age', min_value=0.0, max_value=10.0, step=0.1, key='log_Age', value=0.0 if st.session_state.clear else st.session_state.get('log_Age', 0.0))
 
         classes_list = ['Diabetes', 'No Diabetes']
         
