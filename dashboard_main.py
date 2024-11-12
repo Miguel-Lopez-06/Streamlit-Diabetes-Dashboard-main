@@ -349,7 +349,7 @@ elif st.session_state.page_selection == "machine_learning":
             
     """)
 
-    st.write("Accuracy: 100.00%")
+    st.write("Accuracy: 70.13%")
 
     st.markdown("""
 
@@ -368,8 +368,8 @@ elif st.session_state.page_selection == "machine_learning":
     """)
 
     dt_feature_importance = {
-        'Feature': ['sepal_length', 'sepal_width', 'petal_length', 'petal_width'],
-        'Importance': [0.000000, 0.019110, 0.893264, 0.087626]
+        'Feature': ['Pregnancies', 'Glucose', 'BloodPressure', 'SkinThickness', 'Insulin', 'BMI', 'DiabetesPedigreeFunction', 'Age'],
+        'Importance': [0.027255, 0.356937, 0.097345, 0.061428, 0.039552, 0.186479, 0.096871, 0.134134]
     }
 
     dt_feature_importance_df = pd.DataFrame(dt_feature_importance)
