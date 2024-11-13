@@ -235,7 +235,13 @@ elif st.session_state.page_selection == "eda":
 
     st.header("Age Distribution")
     dt_tree_image = Image.open('assets/eda/PieChart.png')
-    st.image(dt_tree_image, caption='Age Distribution')
+    col1, col2, col3 = st.columns([1, 2, 1])  # Adjust column widths if needed
+    with col1:
+        st.write("")  # Placeholder for left column
+    with col2:
+        st.image(dt_tree_image, caption='Age Distribution', use_column_width=True)  # Centered image
+    with col3:
+        st.write("")
 
     st.markdown("""
                 
@@ -245,7 +251,13 @@ elif st.session_state.page_selection == "eda":
 
     st.header("Glucose Levels by Outcome")
     dt_tree_image = Image.open('assets/eda/PieChart.png')
-    st.image(dt_tree_image, caption='Glucose Levels by Outcome')
+    col1, col2, col3 = st.columns([1, 2, 1])  # Adjust column widths if needed
+    with col1:
+        st.write("")  # Placeholder for left column
+    with col2:
+        st.image(dt_tree_image, caption='Glucose Levels by Outcome', use_column_width=True)  # Centered image
+    with col3:
+        st.write("")
 
     st.markdown("""
                 
@@ -255,7 +267,13 @@ elif st.session_state.page_selection == "eda":
 
     st.header("BMI vs Age (Color-coded by Outcome)")
     dt_tree_image = Image.open('assets/eda/PieChart.png')
-    st.image(dt_tree_image, caption='BMI vs Age (Color-coded by Outcome)')
+    col1, col2, col3 = st.columns([1, 2, 1])  # Adjust column widths if needed
+    with col1:
+        st.write("")  # Placeholder for left column
+    with col2:
+        st.image(dt_tree_image, caption='Distribution of Outcome', use_column_width=True)  # Centered image
+    with col3:
+        st.write("")
 
     st.markdown("""
                 
