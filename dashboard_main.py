@@ -226,6 +226,36 @@ elif st.session_state.page_selection == "eda":
                 
     """)
 
+
+    dt_tree_image = Image.open('assets/model_results/DTTree.png')
+    st.image(dt_tree_image, caption='Distribution of Outcome')
+
+    st.markdown("""
+                
+    Blood pressure levels also show variability, with an average of 69.11 and a standard deviation of 19.36. Blood pressure readings range from 0 to 122, with a median of 72. The presence of zero values may imply missing or incorrect data. Skin thickness has a mean of 20.54, a standard deviation of 15.95, and a range extending up to 99. This measure includes some zero values, likely indicating missing data, while the median of 23 suggests a slight skew toward higher values. Insulin levels vary greatly, with an average of 79.80 but a high standard deviation of 115.24, spanning from 0 to 846. This wide spread suggests significant variation in insulin levels among individuals, potentially influenced by factors like diabetes management or data quality.  
+                
+    """)
+
+
+    dt_tree_image = Image.open('assets/model_results/DTTree.png')
+    st.image(dt_tree_image, caption='Distribution of Outcome')
+
+    st.markdown("""
+                
+    Blood pressure levels also show variability, with an average of 69.11 and a standard deviation of 19.36. Blood pressure readings range from 0 to 122, with a median of 72. The presence of zero values may imply missing or incorrect data. Skin thickness has a mean of 20.54, a standard deviation of 15.95, and a range extending up to 99. This measure includes some zero values, likely indicating missing data, while the median of 23 suggests a slight skew toward higher values. Insulin levels vary greatly, with an average of 79.80 but a high standard deviation of 115.24, spanning from 0 to 846. This wide spread suggests significant variation in insulin levels among individuals, potentially influenced by factors like diabetes management or data quality.  
+                
+    """)
+
+
+    dt_tree_image = Image.open('assets/model_results/DTTree.png')
+    st.image(dt_tree_image, caption='Distribution of Outcome')
+
+    st.markdown("""
+                
+    Blood pressure levels also show variability, with an average of 69.11 and a standard deviation of 19.36. Blood pressure readings range from 0 to 122, with a median of 72. The presence of zero values may imply missing or incorrect data. Skin thickness has a mean of 20.54, a standard deviation of 15.95, and a range extending up to 99. This measure includes some zero values, likely indicating missing data, while the median of 23 suggests a slight skew toward higher values. Insulin levels vary greatly, with an average of 79.80 but a high standard deviation of 115.24, spanning from 0 to 846. This wide spread suggests significant variation in insulin levels among individuals, potentially influenced by factors like diabetes management or data quality.  
+                
+    """)
+
     
 
 # Data Cleaning Page
