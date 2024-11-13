@@ -232,7 +232,7 @@ elif st.session_state.page_selection == "eda":
     )
 
 # Display the image inside a container with the centered CSS class
-    st.markdown('<div class="centered-image"><img src="assets/eda/PieChart.png" width="70%"></div>', unsafe_allow_html=True)
+    st.markdown('<div class="centered-image"><img src="assets/eda/PieChart.png" width="50%"></div>', unsafe_allow_html=True)
 
 # Alternatively, if the above doesn't work, use st.image directly
     st.image(dt_tree_image, caption="Distribution of Outcome", use_column_width=True)
