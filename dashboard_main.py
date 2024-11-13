@@ -171,12 +171,12 @@ elif st.session_state.page_selection == "dataset":
 
     The **Diabetes dataset** is originally from the National Institute of Diabetes and Digestive and Kidney Diseases. The objective is to predict based on diagnostic measurements whether a patient has diabetes.  
 
-    For each sample, four features are measured: sepal length, sepal width, petal length, and petal width (in centimeters). This dataset is commonly used to test classification techniques like support vector machines. The same dataset that is used for this data science activity was uploaded to Kaggle by the user named **Mathnerd**.
+    Several constraints were placed on the selection of these instances from a larger database. In particular, all patients here are females at least 21 years old of Pima Indian heritage. This dataset is commonly used to test classification techniques like support vector machines. The same dataset that is used for this data science activity was uploaded to Kaggle by the user named **Mehmet Akturk**.
 
     **Content**  
     The dataset has **150** rows containing **5 primary attributes** that are related to the iris flower, the columns are as follows: **Petal Length**, **Petal Width**, **Sepal Length**, **Sepal width**, and **Class(Species)**.
 
-    `Link:` https://www.kaggle.com/datasets/arshid/iris-flower-dataset            
+    `Link:` https://www.kaggle.com/datasets/mathchi/diabetes-data-set            
                 
     """)
 
