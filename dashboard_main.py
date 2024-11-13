@@ -234,9 +234,6 @@ elif st.session_state.page_selection == "eda":
 # Display the image inside a container with the centered CSS class
     st.markdown('<div class="centered-image"><img src="assets/eda/PieChart.png" width="50%"></div>', unsafe_allow_html=True)
 
-# Alternatively, if the above doesn't work, use st.image directly
-    st.image(dt_tree_image, caption="Distribution of Outcome", use_column_width=True)
-
     st.markdown("""
                 
     Based on the results we can see that there's a balanced distribution of the outcome of Diabetes. With this in mind, we don't need to perform any pre-processing techniques anymore to balance the classes since it's already balanced.  
