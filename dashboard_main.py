@@ -459,7 +459,7 @@ elif st.session_state.page_selection == "machine_learning":
 
     st.header("Confusion Matrix for Decision Tree")
     dt_tree_image = Image.open('assets/eda/Conf1.png')
-    col1, col2, col3 = st.columns([1, 2, 1])  # Adjust column widths if needed
+    col1, col2, col3 = st.columns([4, 8, 4])  # Adjust column widths if needed
     with col1:
         st.write("")  # Placeholder for left column
     with col2:
