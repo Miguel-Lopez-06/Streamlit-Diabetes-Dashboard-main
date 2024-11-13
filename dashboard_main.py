@@ -174,7 +174,7 @@ elif st.session_state.page_selection == "dataset":
     Several constraints were placed on the selection of these instances from a larger database. In particular, all patients here are females at least 21 years old of Pima Indian heritage. This dataset is commonly used to test classification techniques like support vector machines. The same dataset that is used for this data science activity was uploaded to Kaggle by the user named **Mehmet Akturk**.
 
     **Content**  
-    The dataset has **150** rows containing **5 primary attributes** that are related to the iris flower, the columns are as follows: **Petal Length**, **Petal Width**, **Sepal Length**, **Sepal width**, and **Class(Species)**.
+    The dataset has 768 rows containing 9 primary attributes that are related to medical information for predicting diabetes. The columns are as follows: Pregnancies, Glucose, BloodPressure, SkinThickness, Insulin, BMI, DiabetesPedigreeFunction, Age, and Outcome (0 for No Diabetes, 1 for Diabetes).
 
     `Link:` https://www.kaggle.com/datasets/mathchi/diabetes-data-set            
                 
