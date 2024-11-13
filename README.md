@@ -1,8 +1,8 @@
 # Diabetes Dashboard using Streamlit
 
-A Streamlit web application that performs **Exploratory Data Analysis (EDA)**, **Data Preprocessing**, and **Supervised Machine Learning** to classify Iris species from the Iris dataset (Setosa, Versicolor, and Virginica) using **Decision Tree Classifier** and **Random Forest Regressor**.
+A Streamlit web application that performs Exploratory Data Analysis (EDA), Data Preprocessing, and Supervised Machine Learning to classify Diabetes outcome from the Diabetes dataset (Diabetes and No Diabetes) using Decision Tree Classifier and Logistic Regression.
 
-![Main Page Screenshot](screenshots/IrisClassificationDashboard.webp)
+![Main Page Screenshot](screenshots/Diabetes_Dashboard.png)
 
 ### 🔗 Links:
 
@@ -11,7 +11,7 @@ A Streamlit web application that performs **Exploratory Data Analysis (EDA)**, *
 
 ### 📊 Dataset:
 
-- [Iris Flower Dataset (Kaggle)](https://www.kaggle.com/datasets/arshid/iris-flower-dataset)
+- [Diabetes Dataset (Kaggle)](https://www.kaggle.com/datasets/arshid/iris-flower-dataset)
 
 ### 📖 Pages:
 
