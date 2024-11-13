@@ -457,8 +457,14 @@ elif st.session_state.page_selection == "machine_learning":
 
     """)
 
-    dt_tree_image = Image.open('assets/model_results/DTTree.png')
-    st.image(dt_tree_image, caption='Decision Tree Classifier - Tree Plot')
+    dt_tree_image = Image.open('assets/eda/DT.png')
+    col1, col2, col3 = st.columns([1, 2, 1])  # Adjust column widths if needed
+    with col1:
+        st.write("")  # Placeholder for left column
+    with col2:
+        st.image(dt_tree_image, caption='Distribution of Outcome', use_column_width=True)  # Centered image
+    with col3:
+        st.write("")
 
     st.markdown("""
 
