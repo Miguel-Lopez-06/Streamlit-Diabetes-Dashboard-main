@@ -502,22 +502,21 @@ elif st.session_state.page_selection == "machine_learning":
 
     Each tree is then trained separately to make predictions based on its unique subset. When it's time to make a final prediction each tree in the forest gives its own result and the Random Forest algorithm averages these predictions.
 
-    `Reference:` https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestRegressor.html
+    `Reference:` https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
          
     """)
 
     # Columns to center the Random Forest Regressor figure image
     col_rfr_fig = st.columns((2, 4, 2), gap='medium')
 
-    with col_rfr_fig[0]:
-        st.write(' ')
-
-    with col_rfr_fig[1]:
-        decision_tree_parts_image = Image.open('assets/figures/Random-Forest-Figure.png')
-        st.image(decision_tree_parts_image, caption='Random Forest Figure')
-
-    with col_rfr_fig[2]:
-        st.write(' ')
+    dt_tree_image = Image.open('assets/eda/Log.png')
+    col1, col2, col3 = st.columns([1, 2, 1])  # Adjust column widths if needed
+    with col1:
+        st.write("")  # Placeholder for left column
+    with col2:
+        st.image(dt_tree_image, caption='Distribution of Outcome', use_column_width=True)  # Centered image
+    with col3:
+        st.write("")
 
     st.subheader("Training the Logistic Regression model")
 
