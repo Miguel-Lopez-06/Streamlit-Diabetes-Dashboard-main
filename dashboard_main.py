@@ -220,6 +220,16 @@ elif st.session_state.page_selection == "eda":
     dt_tree_image = Image.open('assets/model_results/DTTree.png')
     st.image(dt_tree_image, caption='Distribution of Outcome')
 
+    st.markdown("""
+
+    The results from `df.describe()` highlights the descriptive statistics about the dataset. The dataset comprises 768 entries, each with 9 attributes that capture various health and medical metrics relevant to diabetes risk. On average, individuals have had approximately 3.85 pregnancies, with a significant range from 0 to 17, reflecting a diverse population in terms of reproductive history. Glucose levels average around 120.89, though there is moderate variability, with values ranging from 0 to 199. The median glucose level is 117, suggesting some extreme values on both ends, possibly indicating outliers or data errors for cases with a glucose level of 0.  
+
+    Blood pressure levels also show variability, with an average of 69.11 and a standard deviation of 19.36. Blood pressure readings range from 0 to 122, with a median of 72. The presence of zero values may imply missing or incorrect data. Skin thickness has a mean of 20.54, a standard deviation of 15.95, and a range extending up to 99. This measure includes some zero values, likely indicating missing data, while the median of 23 suggests a slight skew toward higher values. Insulin levels vary greatly, with an average of 79.80 but a high standard deviation of 115.24, spanning from 0 to 846. This wide spread suggests significant variation in insulin levels among individuals, potentially influenced by factors like diabetes management or data quality.  
+
+    The dataset’s BMI (Body Mass Index) averages 31.99, with values ranging from 0 to 67.1, and a median of 32. While this indicates a distribution around typical BMI values, the presence of zero values may indicate missing entries. The Diabetes Pedigree Function, reflecting genetic predisposition, has a mean of 0.4719 and ranges from 0.078 to 2.42, with a median of 0.3725. This suggests that a subset of individuals has a notably higher genetic risk for diabetes. Age-wise, the dataset’s participants average 33.24 years, with a standard deviation of 11.76, indicating a relatively young to middle-aged group, and ages span from 21 to 81 years, with a median age of 29.
+                
+    """)
+
     
 
 # Data Cleaning Page
