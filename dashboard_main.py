@@ -228,7 +228,7 @@ elif st.session_state.page_selection == "eda":
     """)
 
     st.header("Age Distribution")
-    dt_tree_image = Image.open('assets/model_results/DTTree.png')
+    dt_tree_image = Image.open('assets/eda/PieChart.png')
     st.image(dt_tree_image, caption='Age Distribution')
 
     st.markdown("""
@@ -238,7 +238,7 @@ elif st.session_state.page_selection == "eda":
     """)
 
     st.header("Glucose Levels by Outcome")
-    dt_tree_image = Image.open('assets/model_results/DTTree.png')
+    dt_tree_image = Image.open('assets/eda/PieChart.png')
     st.image(dt_tree_image, caption='Glucose Levels by Outcome')
 
     st.markdown("""
@@ -248,7 +248,7 @@ elif st.session_state.page_selection == "eda":
     """)
 
     st.header("BMI vs Age (Color-coded by Outcome)")
-    dt_tree_image = Image.open('assets/model_results/DTTree.png')
+    dt_tree_image = Image.open('assets/eda/PieChart.png')
     st.image(dt_tree_image, caption='BMI vs Age (Color-coded by Outcome)')
 
     st.markdown("""
