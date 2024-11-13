@@ -574,21 +574,37 @@ elif st.session_state.page_selection == "machine_learning":
 
     """)
 
-    st.subheader("Number of Trees")
-    st.code("""
+   st.header("Confusion Matrix for Decision Tree")
+    dt_tree_image = Image.open('assets/eda/Conf1.png')
+    col1, col2, col3 = st.columns([1, 2, 1])  # Adjust column widths if needed
+    with col1:
+        st.write("")  # Placeholder for left column
+    with col2:
+        st.image(dt_tree_image, caption='Confusion Matrix for Decision Tree', use_column_width=True)  # Centered image
+    with col3:
+        st.write("")
 
-    print(f"Number of trees made: {len(rfr_classifier.estimators_)}")
-     
+    st.markdown("""
+
+    This **Tree Plot** visualizes how our **Decision Tree** classifier model makes its predictions based on what was learned from the Iris species' features during the training.
+                
     """)
 
-    st.markdown("**Number of trees made:** 100")
+    st.header("ROC Curve for Decision Tree")
+    dt_tree_image = Image.open('assets/eda/ROC1.png')
+    col1, col2, col3 = st.columns([1, 2, 1])  # Adjust column widths if needed
+    with col1:
+        st.write("")  # Placeholder for left column
+    with col2:
+        st.image(dt_tree_image, caption='ROC Curve for Decision Tree', use_column_width=True)  # Centered image
+    with col3:
+        st.write("")
 
-    st.subheader("Plotting the Forest")
+    st.markdown("""
 
-    forest_image = Image.open('assets/model_results/RFRForest.png')
-    st.image(forest_image, caption='Random Forest Regressor - Forest Plot')
-
-    st.markdown("This graph shows **all of the decision trees** made by our **Random Forest Regressor** model which then forms a **Forest**.")
+    This **Tree Plot** visualizes how our **Decision Tree** classifier model makes its predictions based on what was learned from the Iris species' features during the training.
+                
+    """)
 
     
 
