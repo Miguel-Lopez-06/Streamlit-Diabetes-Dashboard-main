@@ -720,26 +720,22 @@ elif st.session_state.page_selection == "conclusion":
 
     st.markdown("""
                 
-    Through exploratory data analysis and training of two classification models (`Decision Tree Classifier` and `Logistic Regression`) on the **Diabetes dataset**, the key insights and observations are:
+    Through exploratory data analysis and training of two classification models (Decision Tree Classifier and Logistic Regression) on the Diabetes dataset, the key insights and observations are:
 
     #### 1. 📊 **Dataset Characteristics**:
-    - The dataset shows moderate variation across the **sepal and petal** features. `petal_length` and `petal_width` has higher variability than the sepal features further suggesting that these features are more likely to distinguish between the three Iris flower species.
-    - All of the three Iris species have a **balanced class distribution** which further eliminates the need to rebalance the dataset.
+    - The dataset comprises various medical attributes such as Glucose, Blood Pressure, BMI, and Age, which show varying levels of distribution among individuals with and without diabetes. The 'Outcome' variable indicates whether a person has diabetes (1) or not (0), providing a balanced distribution for binary classification.
 
     #### 2. 📝 **Feature Distributions and Separability**:
-    - **Pairwise Scatter Plot** analysis indicates that `Iris Setosa` forms a distinct cluster based on petal features which makes it easily distinguishable from `Iris Versicolor` and `Iris Virginica`.
-    - **Petal Length** emerged as the most discriminative feature especially for distinguishing `Iris Setosa` from other Iris species.
+    - A closer examination of feature importance highlighted that Glucose levels significantly impact diabetes prediction, as shown by its high feature importance in both models. Other features, such as BMI and Age, also contribute to model predictability, indicating a potential link between these factors and diabetes risk.
 
     #### 3. 📈 **Model Performance (Decision Tree Classifier)**:
 
-    - The `Decision Tree Classifier` achieved 100% accuracy on the training data which suggests that using a relatively simple and structured dataset resulted in a strong performance for this model. However, this could also imply potential **overfitting** due to the model's high sensitivity to the specific training samples.
-    - In terms of **feature importance** results from the *Decision Tree Model*, `petal_length` was the dominant predictor having **89%** importance value which is then followed by `petal_width` with **8.7%**.
+    - The Decision Tree Classifier achieved an accuracy of 70.13% on the test data. The feature importance analysis revealed that Glucose is the most influential predictor in this model, followed by BMI and Age. While the model shows moderate accuracy, there is a possibility of overfitting, as decision trees can be highly sensitive to training data patterns.
 
     #### 4. 📈 **Model Performance (Random Forest Regressor)**:
-    - The **Random Forest Regressor** achieved an accuracy of 98.58% on training and 99.82% on testing which is slightly lower compared to the performance of the *Decision Tree Classifier Model*
-    - **Feature importance** analysis also highlighted `petal_length` as the primary predictor having **58%** importance value followed by `petal_width` with **39%**.
+    - The Logistic Regression model achieved 78.40% accuracy on the training data and 73.59% accuracy on the test data, showing consistency and generalizability. The feature importance analysis, determined by the model's coefficients, also underscored the significance of Glucose and BMI, with Diabetes Pedigree Function and Age contributing to prediction accuracy.
 
     ##### **Summing up:**  
-    Throughout this data science activity, it is evident that the Iris dataset is a good dataset to use for classification despite of its simplicity. Due to its balanced distribution of 3 Iris flower species and having 0 null values, further data cleansing techniques were not used. 2 of the classifier models trained were able to leverage the features that can be found in the dataset which resulted to a high accuracy in terms of the two models' predictions. Despite of the slight overlap between Iris Versicolor and Iris Virginica, the two models trained were able to achieve high accuracy and was able to learn patterns from the dataset.         
+    Throughout this data science exercise, both models demonstrated the potential for classifying diabetes status based on available medical attributes. The Logistic Regression model proved more robust, with higher accuracy and AUC scores, indicating it may be better suited for this dataset. This analysis suggests that Glucose, BMI, and Age are vital indicators of diabetes risk, supporting the importance of these features in predictive healthcare models. Further tuning and cross-validation could enhance the performance and reliability of these models in clinical applications.         
                 
     """)
