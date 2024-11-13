@@ -217,7 +217,7 @@ elif st.session_state.page_selection == "eda":
                 
                 ''')
 
-    st.header("📈 Exploratory Data Analysis (EDA)")        
+    st.header("Distribution of Outcome")        
     dt_tree_image = Image.open('assets/model_results/DTTree.png')
     st.image(dt_tree_image, caption='Distribution of Outcome')
 
@@ -227,9 +227,9 @@ elif st.session_state.page_selection == "eda":
                 
     """)
 
-    st.header("📈 Exploratory Data Analysis (EDA)")
+    st.header("Age Distribution")
     dt_tree_image = Image.open('assets/model_results/DTTree.png')
-    st.image(dt_tree_image, caption='Distribution of Outcome')
+    st.image(dt_tree_image, caption='Age Distribution')
 
     st.markdown("""
                 
@@ -237,9 +237,9 @@ elif st.session_state.page_selection == "eda":
                 
     """)
 
-    st.header("📈 Exploratory Data Analysis (EDA)")
+    st.header("Glucose Levels by Outcome")
     dt_tree_image = Image.open('assets/model_results/DTTree.png')
-    st.image(dt_tree_image, caption='Distribution of Outcome')
+    st.image(dt_tree_image, caption='Glucose Levels by Outcome')
 
     st.markdown("""
                 
@@ -247,9 +247,9 @@ elif st.session_state.page_selection == "eda":
                 
     """)
 
-    st.header("📈 Exploratory Data Analysis (EDA)")
+    st.header("BMI vs Age (Color-coded by Outcome)")
     dt_tree_image = Image.open('assets/model_results/DTTree.png')
-    st.image(dt_tree_image, caption='Distribution of Outcome')
+    st.image(dt_tree_image, caption='BMI vs Age (Color-coded by Outcome)')
 
     st.markdown("""
                 
