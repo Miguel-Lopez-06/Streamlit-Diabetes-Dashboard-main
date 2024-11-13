@@ -205,7 +205,7 @@ elif st.session_state.page_selection == "eda":
 
     col = st.columns((5, 5, 5), gap='medium')
 
-    with col[5]:
+    with col[0]:
 
         with st.expander('Legend', expanded=True):
             st.write('''
