@@ -395,7 +395,7 @@ elif st.session_state.page_selection == "machine_learning":
     col_dt_fig = st.columns((2, 4, 2), gap='medium')
 
     st.header("Distribution of Outcome")        
-    dt_tree_image = Image.open('assets/eda/PieChart.png')
+    dt_tree_image = Image.open('assets/eda/DT.png')
     col1, col2, col3 = st.columns([1, 2, 1])  # Adjust column widths if needed
     with col1:
         st.write("")  # Placeholder for left column
