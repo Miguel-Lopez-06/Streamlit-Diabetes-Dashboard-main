@@ -219,7 +219,6 @@ elif st.session_state.page_selection == "eda":
 
     st.header("Distribution of Outcome")        
     dt_tree_image = Image.open('assets/eda/PieChart.png')
-    st.image(dt_tree_image, caption='Age Distribution')
     st.markdown(
     """
     <style>
