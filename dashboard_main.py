@@ -154,9 +154,9 @@ if st.session_state.page_selection == "about":
 
     #### Pages
     1. `Dataset` - Brief description of the Diabetes dataset used in this dashboard. 
-    2. `EDA` - Exploratory Data Analysis of the Diabetes dataset. Highlighting the distribution of Diabetes and the relationship between the features. Includes graphs such as Pie Chart, Histogram, Box Plot, and Scatter Plots.
+    2. `EDA` - Exploratory Data Analysis of the Diabetes dataset. Highlighting the distribution of Diabetes and the relationship between the features. Includes graphs such as Pie Chart, Histogram, Box Plot, and Scatter Plot.
     3. `Data Cleaning / Pre-processing` - Data cleaning and pre-processing steps such as encoding the outcome column and splitting the dataset into training and testing sets.
-    4. `Machine Learning` - Training two supervised classification models: Decision Tree Classifier and Logistic Regression. Includes model evaluation, feature importance, and tree plot.
+    4. `Machine Learning` - Training two supervised classification models: Decision Tree Classifier and Logistic Regression. Includes model evaluation, Feature Importance, Confusion Matrix and ROC Curve.
     5. `Prediction` - Prediction page where users can input values to predict the Diabetes outcome using the trained models.
     6. `Conclusion` - Summary of the insights and observations from the EDA and model training.
 
