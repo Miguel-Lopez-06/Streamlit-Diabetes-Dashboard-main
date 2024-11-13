@@ -150,7 +150,7 @@ if st.session_state.page_selection == "about":
 
     st.markdown(""" 
 
-    A Streamlit web application that performs **Exploratory Data Analysis (EDA)**, **Data Preprocessing**, and **Supervised Machine Learning** to classify Diabetes outcome from the Diabetes dataset (Diabtes and No Diabetes) using **Decision Tree Classifier** and **Logistic Regression**.
+    A Streamlit web application that performs **Exploratory Data Analysis (EDA)**, **Data Preprocessing**, and **Supervised Machine Learning** to classify Diabetes outcome from the Diabetes dataset (Diabetes and No Diabetes) using **Decision Tree Classifier** and **Logistic Regression**.
 
     #### Pages
     1. `Dataset` - Brief description of the Diabetes dataset used in this dashboard. 
@@ -169,7 +169,7 @@ elif st.session_state.page_selection == "dataset":
 
     st.markdown("""
 
-    The **Iris flower dataset** was introduced by **Ronald Fisher** in 1936, it is a dataset used widely in machine learning. Originally collected by Edgar Anderson, it includes **50 samples** each from three Iris species (**Iris Setosa**, **Iris Virginica**, and **Iris Versicolor**).  
+    The **Diabetes dataset** was introduced by **Ronald Fisher** in 1936, it is a dataset used widely in machine learning. Originally collected by Edgar Anderson, it includes **50 samples** each from three Iris species (**Iris Setosa**, **Iris Virginica**, and **Iris Versicolor**).  
 
     For each sample, four features are measured: sepal length, sepal width, petal length, and petal width (in centimeters). This dataset is commonly used to test classification techniques like support vector machines. The same dataset that is used for this data science activity was uploaded to Kaggle by the user named **Mathnerd**.
 
