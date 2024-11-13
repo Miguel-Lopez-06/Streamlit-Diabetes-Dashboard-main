@@ -704,7 +704,7 @@ elif st.session_state.page_selection == "conclusion":
 
     st.markdown("""
                 
-    Through exploratory data analysis and training of two classification models (`Decision Tree Classifier` and `Random Forest Regressor`) on the **Iris Flower dataset**, the key insights and observations are:
+    Through exploratory data analysis and training of two classification models (`Decision Tree Classifier` and `Logistic Regression`) on the **Diabetes dataset**, the key insights and observations are:
 
     #### 1. 📊 **Dataset Characteristics**:
     - The dataset shows moderate variation across the **sepal and petal** features. `petal_length` and `petal_width` has higher variability than the sepal features further suggesting that these features are more likely to distinguish between the three Iris flower species.
