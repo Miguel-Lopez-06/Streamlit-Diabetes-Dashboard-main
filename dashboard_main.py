@@ -393,8 +393,7 @@ elif st.session_state.page_selection == "machine_learning":
 
     # Columns to center the Decision Tree Parts image
     col_dt_fig = st.columns((2, 4, 2), gap='medium')
-
-    st.header("Distribution of Outcome")        
+      
     dt_tree_image = Image.open('assets/eda/DT.png')
     col1, col2, col3 = st.columns([1, 2, 1])  # Adjust column widths if needed
     with col1:
