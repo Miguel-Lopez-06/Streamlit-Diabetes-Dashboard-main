@@ -223,7 +223,7 @@ elif st.session_state.page_selection == "eda":
 
     st.markdown("""
                 
-    Blood pressure levels also show variability, with an average of 69.11 and a standard deviation of 19.36. Blood pressure readings range from 0 to 122, with a median of 72. The presence of zero values may imply missing or incorrect data. Skin thickness has a mean of 20.54, a standard deviation of 15.95, and a range extending up to 99. This measure includes some zero values, likely indicating missing data, while the median of 23 suggests a slight skew toward higher values. Insulin levels vary greatly, with an average of 79.80 but a high standard deviation of 115.24, spanning from 0 to 846. This wide spread suggests significant variation in insulin levels among individuals, potentially influenced by factors like diabetes management or data quality.  
+    Based on the results we can see that there's a balanced distribution of the outcome of Diabetes. With this in mind, we don't need to perform any pre-processing techniques anymore to balance the classes since it's already balanced.  
                 
     """)
 
@@ -233,7 +233,7 @@ elif st.session_state.page_selection == "eda":
 
     st.markdown("""
                 
-    Blood pressure levels also show variability, with an average of 69.11 and a standard deviation of 19.36. Blood pressure readings range from 0 to 122, with a median of 72. The presence of zero values may imply missing or incorrect data. Skin thickness has a mean of 20.54, a standard deviation of 15.95, and a range extending up to 99. This measure includes some zero values, likely indicating missing data, while the median of 23 suggests a slight skew toward higher values. Insulin levels vary greatly, with an average of 79.80 but a high standard deviation of 115.24, spanning from 0 to 846. This wide spread suggests significant variation in insulin levels among individuals, potentially influenced by factors like diabetes management or data quality.  
+    The plot shows that the majority of individuals are between 20 and 40 years old, with a significant decrease in frequency as age increases beyond 50. This distribution can indicate that the dataset has a younger population focus. Understanding age distribution is important because age can be a significant factor in diabetes risk, especially as age increases.  
                 
     """)
 
@@ -243,7 +243,7 @@ elif st.session_state.page_selection == "eda":
 
     st.markdown("""
                 
-    Blood pressure levels also show variability, with an average of 69.11 and a standard deviation of 19.36. Blood pressure readings range from 0 to 122, with a median of 72. The presence of zero values may imply missing or incorrect data. Skin thickness has a mean of 20.54, a standard deviation of 15.95, and a range extending up to 99. This measure includes some zero values, likely indicating missing data, while the median of 23 suggests a slight skew toward higher values. Insulin levels vary greatly, with an average of 79.80 but a high standard deviation of 115.24, spanning from 0 to 846. This wide spread suggests significant variation in insulin levels among individuals, potentially influenced by factors like diabetes management or data quality.  
+    The plot reveals that individuals with diabetes (Outcome = 1) generally have higher glucose levels than those without diabetes (Outcome = 0). There are also more outliers in the group without diabetes, with some individuals having very low glucose levels. This clear difference suggests that glucose levels are an important factor in predicting diabetes outcomes, as higher glucose levels are commonly associated with diabetes.  
                 
     """)
 
@@ -253,7 +253,7 @@ elif st.session_state.page_selection == "eda":
 
     st.markdown("""
                 
-    Blood pressure levels also show variability, with an average of 69.11 and a standard deviation of 19.36. Blood pressure readings range from 0 to 122, with a median of 72. The presence of zero values may imply missing or incorrect data. Skin thickness has a mean of 20.54, a standard deviation of 15.95, and a range extending up to 99. This measure includes some zero values, likely indicating missing data, while the median of 23 suggests a slight skew toward higher values. Insulin levels vary greatly, with an average of 79.80 but a high standard deviation of 115.24, spanning from 0 to 846. This wide spread suggests significant variation in insulin levels among individuals, potentially influenced by factors like diabetes management or data quality.  
+    In the plot, red and blue colors distinguish between diabetic and non-diabetic individuals. The plot does not show a strong linear correlation between BMI and age; however, a higher concentration of diabetic cases is visible among individuals with higher BMI, regardless of age. This observation aligns with the known relationship between higher BMI and increased diabetes risk.  
                 
     """)
 
