@@ -219,20 +219,13 @@ elif st.session_state.page_selection == "eda":
 
     st.header("Distribution of Outcome")        
     dt_tree_image = Image.open('assets/eda/PieChart.png')
-    st.markdown(
-    """
-    <style>
-    .centered-image {
-        display: flex;
-        justify-content: center;
-    }
-    </style>
-    """,
-    unsafe_allow_html=True
-    )
-
-# Display the image inside a container with the centered CSS class
-    st.markdown('<div class="centered-image"><img src="assets/eda/PieChart.png" width="50%"></div>', unsafe_allow_html=True)
+    col1, col2, col3 = st.columns([1, 2, 1])  # Adjust column widths if needed
+    with col1:
+        st.write("")  # Placeholder for left column
+    with col2:
+        st.image(dt_tree_image, caption='Distribution of Outcome', use_column_width=True)  # Centered image
+    with col3:
+        st.write("")
 
     st.markdown("""
                 
