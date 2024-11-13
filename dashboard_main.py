@@ -307,7 +307,7 @@ elif st.session_state.page_selection == "data_cleaning":
 
     st.markdown("""
 
-    Now we converted the values of **species** column to numerical values using `LabelEncoder`. The **species_encoded** column can now be used as a label for training our supervised model.
+    Now we converted the values of **outcome** column to numerical values using `LabelEncoder`. The **outcome_encoded** column can now be used as a label for training our supervised model.
          
     """)
 
@@ -324,7 +324,7 @@ elif st.session_state.page_selection == "data_cleaning":
 
     st.markdown("""
 
-    With the help of **embeddings**, Iris-setosa is now represented by a numerical value of **0**, Iris-versicolor represented by **1**, and Iris-virginica represented by **2**.
+    With the help of **embeddings**, Diabetes is now represented by a numerical value of **1**, and No Diabetes represented by **0**.
          
     """)
 
@@ -347,8 +347,8 @@ elif st.session_state.page_selection == "data_cleaning":
     st.markdown("""
 
     Now we select the features and labels for training our model.  
-    The potential `features` that we can use are **sepal_length**, **sepal_width**, **petal_length**, and **petal_width**.  
-    As for the `label` we can use the **species_encoded** column derived from the *species* column.
+    The potential `features` that we can use are **Pregnancies**, **Glucose**, **BloodPressure**, **SkinThickness**, **Insulin**, **BMI**, **DiabetesPedigreeFunction**, and **Age**.  
+    As for the `label` we can use the **outcome_encoded** column derived from the *outcome* column.
          
     """)
 
