@@ -218,7 +218,7 @@ elif st.session_state.page_selection == "eda":
                 ''')
 
     st.header("Distribution of Outcome")        
-    dt_tree_image = Image.open('assets/model_results/DTTree.png')
+    dt_tree_image = Image.open('assets/model_results/PieChart.png')
     st.image(dt_tree_image, caption='Distribution of Outcome')
 
     st.markdown("""
