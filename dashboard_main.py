@@ -210,12 +210,15 @@ elif st.session_state.page_selection == "eda":
         with st.expander('Legend', expanded=True):
             st.write('''
                 - Data: [Diabetes Dataset](https://www.kaggle.com/datasets/mathchi/diabetes-data-set).
-                - :orange[**Pie Chart**]: Distribution of the 3 Iris species in the dataset.
-                - :orange[**Histogram**]: Distribution of the 3 Iris species in the dataset.
-                - :orange[**Box Plot**]: Difference of Iris species' features.
-                - :orange[**Scatter Plot**]: Difference of Iris species' features.
+                - :orange[**Pie Chart**]: Distribution of Outcome.
+                - :orange[**Histogram**]: Age Distribution.
+                - :orange[**Box Plot**]: Glucose Levels by Outcome.
+                - :orange[**Scatter Plot**]: BMI vs Age (Color-coded by Outcome).
                 
                 ''')
+            
+    dt_tree_image = Image.open('assets/model_results/DTTree.png')
+    st.image(dt_tree_image, caption='Decision Tree Classifier - Tree Plot')
 
     
 
