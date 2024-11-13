@@ -218,7 +218,7 @@ elif st.session_state.page_selection == "eda":
                 ''')
             
     dt_tree_image = Image.open('assets/model_results/DTTree.png')
-    st.image(dt_tree_image, caption='Decision Tree Classifier - Tree Plot')
+    st.image(dt_tree_image, caption='Distribution of Outcome')
 
     
 
