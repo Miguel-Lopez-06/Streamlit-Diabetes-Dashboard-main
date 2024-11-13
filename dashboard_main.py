@@ -457,13 +457,13 @@ elif st.session_state.page_selection == "machine_learning":
 
     """)
 
-    st.header("Training the Decision Tree Classifier")
-    dt_tree_image = Image.open('assets/eda/DT.png')
+    st.header("Confusion Matrix for Decision Tree")
+    dt_tree_image = Image.open('assets/eda/Conf1.png')
     col1, col2, col3 = st.columns([1, 2, 1])  # Adjust column widths if needed
     with col1:
         st.write("")  # Placeholder for left column
     with col2:
-        st.image(dt_tree_image, caption='Distribution of Outcome', use_column_width=True)  # Centered image
+        st.image(dt_tree_image, caption='Confusion Matrix for Decision Tree', use_column_width=True)  # Centered image
     with col3:
         st.write("")
 
