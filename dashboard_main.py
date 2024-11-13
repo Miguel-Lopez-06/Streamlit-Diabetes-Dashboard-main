@@ -211,8 +211,10 @@ elif st.session_state.page_selection == "eda":
             st.write('''
                 - Data: [Diabetes Dataset](https://www.kaggle.com/datasets/mathchi/diabetes-data-set).
                 - :orange[**Pie Chart**]: Distribution of the 3 Iris species in the dataset.
-                - :orange[**Scatter Plots**]: Difference of Iris species' features.
-                - :orange[**Pairwise Scatter Plot Matrix**]: Highlighting *overlaps* and *differences* among Iris species' features.
+                - :orange[**Histogram**]: Distribution of the 3 Iris species in the dataset.
+                - :orange[**Box Plot**]: Difference of Iris species' features.
+                - :orange[**Scatter Plot**]: Difference of Iris species' features.
+                
                 ''')
 
     
