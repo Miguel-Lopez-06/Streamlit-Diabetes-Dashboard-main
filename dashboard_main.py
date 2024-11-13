@@ -574,13 +574,13 @@ elif st.session_state.page_selection == "machine_learning":
 
     """)
 
-   st.header("Confusion Matrix for Decision Tree")
+   st.header("Confusion Matrix for Logistic Regression")
     dt_tree_image = Image.open('assets/eda/Conf1.png')
     col1, col2, col3 = st.columns([1, 2, 1])  # Adjust column widths if needed
     with col1:
         st.write("")  # Placeholder for left column
     with col2:
-        st.image(dt_tree_image, caption='Confusion Matrix for Decision Tree', use_column_width=True)  # Centered image
+        st.image(dt_tree_image, caption='Confusion Matrix for Logistic Regression', use_column_width=True)  # Centered image
     with col3:
         st.write("")
 
@@ -590,13 +590,13 @@ elif st.session_state.page_selection == "machine_learning":
                 
     """)
 
-    st.header("ROC Curve for Decision Tree")
+    st.header("ROC Curve for Logistic Regression")
     dt_tree_image = Image.open('assets/eda/ROC1.png')
     col1, col2, col3 = st.columns([1, 2, 1])  # Adjust column widths if needed
     with col1:
         st.write("")  # Placeholder for left column
     with col2:
-        st.image(dt_tree_image, caption='ROC Curve for Decision Tree', use_column_width=True)  # Centered image
+        st.image(dt_tree_image, caption='ROC Curve for Logistic Regression', use_column_width=True)  # Centered image
     with col3:
         st.write("")
 
