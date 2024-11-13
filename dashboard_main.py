@@ -574,7 +574,7 @@ elif st.session_state.page_selection == "machine_learning":
 
     """)
 
-   st.header("Confusion Matrix for Logistic Regression")
+    st.header("Confusion Matrix for Logistic Regression")
     dt_tree_image = Image.open('assets/eda/Conf1.png')
     col1, col2, col3 = st.columns([1, 2, 1])  # Adjust column widths if needed
     with col1:
