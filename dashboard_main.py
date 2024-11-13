@@ -216,7 +216,8 @@ elif st.session_state.page_selection == "eda":
                 - :orange[**Scatter Plot**]: BMI vs Age (Color-coded by Outcome).
                 
                 ''')
-            
+
+    st.header("📈 Exploratory Data Analysis (EDA)")        
     dt_tree_image = Image.open('assets/model_results/DTTree.png')
     st.image(dt_tree_image, caption='Distribution of Outcome')
 
@@ -226,7 +227,7 @@ elif st.session_state.page_selection == "eda":
                 
     """)
 
-
+    st.header("📈 Exploratory Data Analysis (EDA)")
     dt_tree_image = Image.open('assets/model_results/DTTree.png')
     st.image(dt_tree_image, caption='Distribution of Outcome')
 
@@ -236,7 +237,7 @@ elif st.session_state.page_selection == "eda":
                 
     """)
 
-
+    st.header("📈 Exploratory Data Analysis (EDA)")
     dt_tree_image = Image.open('assets/model_results/DTTree.png')
     st.image(dt_tree_image, caption='Distribution of Outcome')
 
@@ -246,7 +247,7 @@ elif st.session_state.page_selection == "eda":
                 
     """)
 
-
+    st.header("📈 Exploratory Data Analysis (EDA)")
     dt_tree_image = Image.open('assets/model_results/DTTree.png')
     st.image(dt_tree_image, caption='Distribution of Outcome')
 
