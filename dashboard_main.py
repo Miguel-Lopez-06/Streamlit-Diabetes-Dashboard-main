@@ -203,7 +203,7 @@ elif st.session_state.page_selection == "dataset":
 elif st.session_state.page_selection == "eda":
     st.header("📈 Exploratory Data Analysis (EDA)")
 
-    col = st.columns((3, 3, 3), gap='medium')
+    col = st.columns((5, 5, 5), gap='medium')
 
     with col[0]:
 
