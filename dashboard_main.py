@@ -569,12 +569,7 @@ elif st.session_state.page_selection == "machine_learning":
 
     st.markdown("This graph shows **all of the decision trees** made by our **Random Forest Regressor** model which then forms a **Forest**.")
 
-    st.subheader("Forest - Single Tree")
-
-    forest_single_tree_image = Image.open('assets/model_results/RFRTreeOne.png')
-    st.image(forest_single_tree_image, caption='Random Forest Regressor - Single Tree')
-
-    st.markdown("This **Tree Plot** shows a single tree from our Random Forest Regressor model.")
+    
 
 
 # Prediction Page
