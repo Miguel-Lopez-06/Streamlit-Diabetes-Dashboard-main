@@ -732,7 +732,7 @@ elif st.session_state.page_selection == "conclusion":
 
     - The Decision Tree Classifier achieved an accuracy of 70.13% on the test data. The feature importance analysis revealed that Glucose is the most influential predictor in this model, followed by BMI and Age. While the model shows moderate accuracy, there is a possibility of overfitting, as decision trees can be highly sensitive to training data patterns.
 
-    #### 4. 📈 **Model Performance (Random Forest Regressor)**:
+    #### 4. 📈 **Model Performance (Logistic Regression)**:
     - The Logistic Regression model achieved 78.40% accuracy on the training data and 73.59% accuracy on the test data, showing consistency and generalizability. The feature importance analysis, determined by the model's coefficients, also underscored the significance of Glucose and BMI, with Diabetes Pedigree Function and Age contributing to prediction accuracy.
 
     ##### **Summing up:**  
