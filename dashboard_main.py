@@ -380,7 +380,7 @@ elif st.session_state.page_selection == "data_cleaning":
 elif st.session_state.page_selection == "machine_learning":
     st.header("🤖 Machine Learning")
 
-    st.subheader("Decision Tree Classifier")
+    st.header("Decision Tree Classifier")
     st.markdown("""
 
     **Decision Tree Classifier** from Scikit-learn library is a machine learning algorithm that is used primarily for *classification* tasks. Its goal is to *categorize* data points into specific classes. This is made by breaking down data into smaller and smaller subsets based on questions which then creates a `"Tree"` structure wherein each **node** in the tree represents a question or decision point based on the feature in the data. Depending on the answer, the data moves down one **branch** of the tree leading to another node with a new question or decision.  
@@ -492,7 +492,7 @@ elif st.session_state.page_selection == "machine_learning":
 
     # Logistic Regression
 
-    st.subheader("Logistic Regression")
+    st.header("Logistic Regression")
 
     st.markdown("""
 
