@@ -426,7 +426,7 @@ elif st.session_state.page_selection == "machine_learning":
 
     st.markdown("""
 
-    Upon training our Decision Tree classifier model, our model managed to obtain 100% accuracy after the training indicating that it was able to learn and recognize patterns from the dataset.
+    Upon training our Decision Tree classifier model, our model managed to obtain 70.13% accuracy after the training indicating that it was able to learn and recognize patterns from the dataset.
      
     """)
 
@@ -453,7 +453,7 @@ elif st.session_state.page_selection == "machine_learning":
 
     st.markdown("""
 
-    Upon running `.feature_importances` in the `Decision Tree Classifier Model` to check how each Iris species' features influence the training of our model, it is clear that **petal_length** holds the most influence in our model's decisions having **0.89** or **89%** importance. This is followed by **petal_width** which is far behind of petal_length having **0.087** or **8.7%** importance.
+    Upon running `.feature_importances` in the `Decision Tree Classifier Model` examine how each feature influences the prediction of diabetes, it is evident that Glucose holds the most significance in the model's decisions, with an importance score of approximately 0.34 or 34%. This is followed by BMI with an importance score of around 0.18 or 18%. Age and Blood Pressure also contribute, with importance scores of approximately 0.13 or 13% and 0.10 or 10%, respectively. Other features like Diabetes Pedigree Function, Skin Thickness, Insulin, and Pregnancies have lower influence on the model, indicating a lesser role in determining diabetes risk in this dataset.
 
     """)
 
@@ -469,7 +469,7 @@ elif st.session_state.page_selection == "machine_learning":
 
     st.markdown("""
 
-    This **Tree Plot** visualizes how our **Decision Tree** classifier model makes its predictions based on what was learned from the Iris species' features during the training.
+    The confusion matrix for the Decision Tree model shows that out of the instances classified as "No Diabetes," 107 were correctly predicted, while 44 were misclassified as "Diabetes." For the "Diabetes" class, 55 instances were correctly predicted, and 25 were incorrectly classified as "No Diabetes." This indicates the model has moderate accuracy but also reveals a tendency to misclassify some cases, especially among the "No Diabetes" predictions.
                 
     """)
 
@@ -485,7 +485,7 @@ elif st.session_state.page_selection == "machine_learning":
 
     st.markdown("""
 
-    This **Tree Plot** visualizes how our **Decision Tree** classifier model makes its predictions based on what was learned from the Iris species' features during the training.
+    The ROC curve for the Decision Tree model shows the trade-off between the True Positive Rate and False Positive Rate. The model has an AUC (Area Under Curve) of 0.70, indicating moderate performance in distinguishing between diabetic and non-diabetic cases. A higher AUC value would suggest better classification, so an AUC of 0.70 reflects that the model is somewhat effective but could benefit from further optimization.
                 
     """)
         
