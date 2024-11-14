@@ -496,11 +496,7 @@ elif st.session_state.page_selection == "machine_learning":
 
     st.markdown("""
 
-    **Random Forest Regressor** is a machine learning algorithm that is used to predict continuous values by *combining multiple decision trees* which is called `"Forest"` wherein each tree is trained independently on different random subset of data and features.
-
-    This process begins with data **splitting** wherein the algorithm selects various random subsets of both the data points and the features to create diverse decision trees.  
-
-    Each tree is then trained separately to make predictions based on its unique subset. When it's time to make a final prediction each tree in the forest gives its own result and the Random Forest algorithm averages these predictions.
+    **Logistic Regression** illustrates ithe relationship between the predictor variable and the probability of the outcome is represented by an S-shaped curve. In logistic regression, the predicted outcome YY lies between 0 and 1, mapping probabilities. Values close to y=1y=1 indicate a high probability of the positive class, while values close to y=0y=0 indicate a high probability of the negative class. This model is particularly useful for binary classification tasks.
 
     `Reference:` https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
          
