@@ -7,7 +7,7 @@ A Streamlit web application that performs Exploratory Data Analysis (EDA), Data 
 ### 🔗 Links:
 
 - 🌐 [Streamlit Link](https://miguel-lopez-06-streamlit-diabetes-dashbo-dashboard-main-i6jzrc.streamlit.app/#b19d2133)
-- 📗 [Google Colab Notebook](https://colab.research.google.com/drive/1UWI3jhR9aK2h7xXVTs4qAiTrXt3dyOSu?usp=sharing#scrollTo=fz7LUFE9y3uF)
+- 📗 [Google Colab Notebook](https://colab.research.google.com/drive/1UWI3jhR9aK2h7xXVTs4qAiTrXt3dyOSu?usp=sharing)
 
 ### 📊 Dataset:
 
