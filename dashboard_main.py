@@ -582,7 +582,7 @@ elif st.session_state.page_selection == "machine_learning":
 
     st.markdown("""
 
-    This **Tree Plot** visualizes how our **Decision Tree** classifier model makes its predictions based on what was learned from the Iris species' features during the training.
+    The confusion matrix for the Logistic Regression model shows that the model correctly classified 120 instances as "No Diabetes" and 50 instances as "Diabetes." However, it misclassified 31 cases where it predicted "Diabetes" for non-diabetic individuals and 30 cases where it predicted "No Diabetes" for diabetic individuals. This suggests that the model has relatively balanced performance with some errors in both classes.
                 
     """)
 
@@ -598,7 +598,7 @@ elif st.session_state.page_selection == "machine_learning":
 
     st.markdown("""
 
-    This **Tree Plot** visualizes how our **Decision Tree** classifier model makes its predictions based on what was learned from the Iris species' features during the training.
+    The ROC curve for the Logistic Regression model demonstrates the model's capability to differentiate between diabetic and non-diabetic cases, with an AUC (Area Under Curve) of 0.80. This AUC value indicates good performance, suggesting that the model has a solid ability to discriminate between the two classes. The curve's shape, approaching the top left corner, reflects a relatively high true positive rate and low false positive rate.
                 
     """)
 
