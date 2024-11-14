@@ -566,7 +566,7 @@ elif st.session_state.page_selection == "machine_learning":
 
     st.markdown("""
 
-    Upon running `.feature_importances` in the `Random Forest Regressor Model` to check how each Iris species' features influence the training of our model, it is clear that **petal_length** holds the most influence in our model's decisions having **0.58** or **58%** importance. This is followed by **petal_width** which is far behind of petal_length having **0.39** or **39%** importance.
+    Upon running `.feature_importances` in the `Logistic Regression Model` to check how each feature influences the prediction of diabetes, it is clear that Glucose holds the most influence in the model's decisions with an importance score of 0.34 or 34%. This is followed by BMI, which has a significantly lower importance score of 0.18 or 18%. Age ranks next with 0.13 or 13% importance, showing a moderate effect on the predictions, while Blood Pressure contributes with 0.10 or 10% importance. Other features like Diabetes Pedigree Function, Skin Thickness, Insulin, and Pregnancies have relatively minor influences on the model's decisions.
 
     """)
 
