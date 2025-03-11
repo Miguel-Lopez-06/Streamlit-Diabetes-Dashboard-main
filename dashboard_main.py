@@ -624,7 +624,7 @@ elif  st.session_state.page_selection == "prediction":
                 st.session_state.clear = True
 
 
-    with col_pred[2]:
+    with col_pred[1]:
         st.markdown("#### Logistic Regression")
 
          # Input boxes for the features
