@@ -233,7 +233,7 @@ elif st.session_state.page_selection == "eda":
     with col1:
         st.write("")  # Placeholder for left column
     with col2:
-        st.image(dt_tree_image, caption='Age Distribution', use_column_width=True)  # Centered image
+        st.image(dt_tree_image, caption='Age Distribution', use_container_width=True)  # Centered image
     with col3:
         st.write("")
 
@@ -249,7 +249,7 @@ elif st.session_state.page_selection == "eda":
     with col1:
         st.write("")  # Placeholder for left column
     with col2:
-        st.image(dt_tree_image, caption='Glucose Levels by Outcome', use_column_width=True)  # Centered image
+        st.image(dt_tree_image, caption='Glucose Levels by Outcome', use_container_width=True)  # Centered image
     with col3:
         st.write("")
 
@@ -265,7 +265,7 @@ elif st.session_state.page_selection == "eda":
     with col1:
         st.write("")  # Placeholder for left column
     with col2:
-        st.image(dt_tree_image, caption='BMI vs Age (Color-coded by Outcome)', use_column_width=True)  # Centered image
+        st.image(dt_tree_image, caption='BMI vs Age (Color-coded by Outcome)', use_container_width=True)  # Centered image
     with col3:
         st.write("")
 
