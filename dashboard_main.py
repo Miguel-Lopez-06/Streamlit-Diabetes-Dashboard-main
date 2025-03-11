@@ -105,9 +105,9 @@ with st.sidebar:
 
 # Load data
 file_path = os.path.join(os.getcwd(), "data/diabetes.csv")
-print(f"Looking for file at: {file_path}")
+print(f"Looking for file at: {"data/diabetes.csv"}")
 
-diabetes_df = pd.read_csv(file_path)
+diabetes_df = pd.read_csv("data/diabetes.csv")
 
 diabetes_df = pd.read_csv("data/diabetes.csv")
 diabetes_df['Outcome'] = diabetes_df['Outcome'].map({1: 'Diabetes', 0: 'No Diabetes'})
