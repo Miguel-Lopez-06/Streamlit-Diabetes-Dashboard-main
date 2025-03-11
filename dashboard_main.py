@@ -623,31 +623,6 @@ elif  st.session_state.page_selection == "prediction":
 
                 st.session_state.clear = True
 
-    with col_pred[1]:
-        st.markdown("#### Decision Tree Classifier")
-        
-        # Input boxes for the features
-        dt_Pregnancies = st.number_input('Pregnancies', min_value=0.0, max_value=10.0, step=0.1, key='dt_Pregnancies', value=0.0 if st.session_state.clear else st.session_state.get('dt_Pregnancies', 0.0))
-        dt_Glucose = st.number_input('Glucose', min_value=0.0, max_value=10.0, step=0.1, key='dt_Glucose', value=0.0 if st.session_state.clear else st.session_state.get('dt_Glucose', 0.0))
-        dt_BloodPressure = st.number_input('BloodPressure', min_value=0.0, max_value=10.0, step=0.1, key='dt_BloodPressure', value=0.0 if st.session_state.clear else st.session_state.get('dt_BloodPressure', 0.0))
-        dt_SkinThickness = st.number_input('SkinThickness', min_value=0.0, max_value=10.0, step=0.1, key='dt_SkinThickness', value=0.0 if st.session_state.clear else st.session_state.get('dt_SkinThickness', 0.0))
-        dt_Insulin = st.number_input('Insulin', min_value=0.0, max_value=10.0, step=0.1, key='dt_Insulin', value=0.0 if st.session_state.clear else st.session_state.get('dt_Insulin', 0.0))
-        dt_BMI = st.number_input('BMI', min_value=0.0, max_value=10.0, step=0.1, key='dt_BMI', value=0.0 if st.session_state.clear else st.session_state.get('dt_BMI', 0.0))
-        dt_DiabetesPedigreeFunction = st.number_input('DiabetesPedigreeFunction', min_value=0.0, max_value=10.0, step=0.1, key='dt_DiabetesPedigreeFunction', value=0.0 if st.session_state.clear else st.session_state.get('dt_DiabetesPedigreeFunction', 0.0))
-        dt_Age = st.number_input('Age', min_value=0.0, max_value=10.0, step=0.1, key='dt_Age', value=0.0 if st.session_state.clear else st.session_state.get('dt_Age', 0.0))
-
-        classes_list = ['Diabetes', 'No Diabetes']
-        
-        # Button to detect the Iris species
-        if st.button('Detect', key='dt_detect'):
-            # Prepare the input data for prediction
-            dt_input_data = [[dt_Pregnancies, dt_Glucose, dt_BloodPressure, dt_SkinThickness, dt_Insulin, dt_BMI, dt_DiabetesPedigreeFunction, dt_Age]]
-            
-            # Predict the Iris species
-            dt_prediction = dt_classifier.predict(dt_input_data)
-            
-            # Display the prediction result
-            st.markdown(f'The predicted outcome is: `{classes_list[dt_prediction[0]]}`')
 
     with col_pred[2]:
         st.markdown("#### Logistic Regression")
