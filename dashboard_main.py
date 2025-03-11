@@ -89,7 +89,13 @@ with st.sidebar:
     st.markdown("📊 [Dataset](https://www.kaggle.com/datasets/mathchi/diabetes-data-set)")
     st.markdown("📗 [Google Colab Notebook](https://colab.research.google.com/drive/1UWI3jhR9aK2h7xXVTs4qAiTrXt3dyOSu?usp=sharing)")
     st.markdown("🐙 [GitHub Repository](https://github.com/Miguel-Lopez-06/Streamlit-Diabetes-Dashboard-main)")
-  
+    st.markdown("by: [`AM7-Group 6`](https://github.com/Miguel-Lopez-06/Streamlit-Diabetes-Dashboard-main)")
+    st.subheader('Members:')
+    st.write('Lu, Angel Michael   ')
+    st.write('Libres, Francis Joseph   ')
+    st.write('Lopez, John Finees Miguel   ')
+    st.write('Molina, Juan Miguel   ')
+    st.write('Macaraeg, Vincent Angelo   ')
 
 
 # -------------------------
@@ -217,7 +223,7 @@ elif st.session_state.page_selection == "eda":
     with col1:
         st.write("")  # Placeholder for left column
     with col2:
-        st.image(dt_tree_image, caption='Distribution of Outcome', use_container_width=True)  # Centered image
+        st.image(dt_tree_image, caption='Distribution of Outcome', use_column_width=True)  # Centered image
     with col3:
         st.write("")
 
@@ -233,7 +239,7 @@ elif st.session_state.page_selection == "eda":
     with col1:
         st.write("")  # Placeholder for left column
     with col2:
-        st.image(dt_tree_image, caption='Age Distribution', use_container_width=True)  # Centered image
+        st.image(dt_tree_image, caption='Age Distribution', use_column_width=True)  # Centered image
     with col3:
         st.write("")
 
@@ -249,7 +255,7 @@ elif st.session_state.page_selection == "eda":
     with col1:
         st.write("")  # Placeholder for left column
     with col2:
-        st.image(dt_tree_image, caption='Glucose Levels by Outcome', use_container_width=True)  # Centered image
+        st.image(dt_tree_image, caption='Glucose Levels by Outcome', use_column_width=True)  # Centered image
     with col3:
         st.write("")
 
@@ -265,7 +271,7 @@ elif st.session_state.page_selection == "eda":
     with col1:
         st.write("")  # Placeholder for left column
     with col2:
-        st.image(dt_tree_image, caption='BMI vs Age (Color-coded by Outcome)', use_container_width=True)  # Centered image
+        st.image(dt_tree_image, caption='BMI vs Age (Color-coded by Outcome)', use_column_width=True)  # Centered image
     with col3:
         st.write("")
 
@@ -393,7 +399,7 @@ elif st.session_state.page_selection == "machine_learning":
     with col1:
         st.write("")  # Placeholder for left column
     with col2:
-        st.image(dt_tree_image, caption='Distribution of Outcome', use_container_width=True)  # Centered image
+        st.image(dt_tree_image, caption='Distribution of Outcome', use_column_width=True)  # Centered image
     with col3:
         st.write("")
 
@@ -457,7 +463,7 @@ elif st.session_state.page_selection == "machine_learning":
     with col1:
         st.write("")  # Placeholder for left column
     with col2:
-        st.image(dt_tree_image, caption='Confusion Matrix for Decision Tree', use_container_width=True)  # Centered image
+        st.image(dt_tree_image, caption='Confusion Matrix for Decision Tree', use_column_width=True)  # Centered image
     with col3:
         st.write("")
 
@@ -473,7 +479,7 @@ elif st.session_state.page_selection == "machine_learning":
     with col1:
         st.write("")  # Placeholder for left column
     with col2:
-        st.image(dt_tree_image, caption='ROC Curve for Decision Tree', use_container_width=True)  # Centered image
+        st.image(dt_tree_image, caption='ROC Curve for Decision Tree', use_column_width=True)  # Centered image
     with col3:
         st.write("")
 
@@ -504,7 +510,7 @@ elif st.session_state.page_selection == "machine_learning":
     with col1:
         st.write("")  # Placeholder for left column
     with col2:
-        st.image(dt_tree_image, caption='Distribution of Outcome', use_container_width=True)  # Centered image
+        st.image(dt_tree_image, caption='Distribution of Outcome', use_column_width=True)  # Centered image
     with col3:
         st.write("")
 
@@ -570,7 +576,7 @@ elif st.session_state.page_selection == "machine_learning":
     with col1:
         st.write("")  # Placeholder for left column
     with col2:
-        st.image(dt_tree_image, caption='Confusion Matrix for Logistic Regression', use_container_width=True)  # Centered image
+        st.image(dt_tree_image, caption='Confusion Matrix for Logistic Regression', use_column_width=True)  # Centered image
     with col3:
         st.write("")
 
@@ -586,7 +592,7 @@ elif st.session_state.page_selection == "machine_learning":
     with col1:
         st.write("")  # Placeholder for left column
     with col2:
-        st.image(dt_tree_image, caption='ROC Curve for Logistic Regression', use_container_width=True)  # Centered image
+        st.image(dt_tree_image, caption='ROC Curve for Logistic Regression', use_column_width=True)  # Centered image
     with col3:
         st.write("")
 
@@ -623,19 +629,44 @@ elif  st.session_state.page_selection == "prediction":
 
                 st.session_state.clear = True
 
-
     with col_pred[1]:
+        st.markdown("#### Decision Tree Classifier")
+        
+        # Input boxes for the features
+        dt_Pregnancies = st.number_input('Pregnancies', min_value=0.0, max_value=10.0, step=0.1, key='dt_Pregnancies', value=0.0 if st.session_state.clear else st.session_state.get('dt_Pregnancies', 0.0))
+        dt_Glucose = st.number_input('Glucose', min_value=0.0, max_value=10.0, step=0.1, key='dt_Glucose', value=0.0 if st.session_state.clear else st.session_state.get('dt_Glucose', 0.0))
+        dt_BloodPressure = st.number_input('BloodPressure', min_value=0.0, max_value=10.0, step=0.1, key='dt_BloodPressure', value=0.0 if st.session_state.clear else st.session_state.get('dt_BloodPressure', 0.0))
+        dt_SkinThickness = st.number_input('SkinThickness', min_value=0.0, max_value=10.0, step=0.1, key='dt_SkinThickness', value=0.0 if st.session_state.clear else st.session_state.get('dt_SkinThickness', 0.0))
+        dt_Insulin = st.number_input('Insulin', min_value=0.0, max_value=10.0, step=0.1, key='dt_Insulin', value=0.0 if st.session_state.clear else st.session_state.get('dt_Insulin', 0.0))
+        dt_BMI = st.number_input('BMI', min_value=0.0, max_value=10.0, step=0.1, key='dt_BMI', value=0.0 if st.session_state.clear else st.session_state.get('dt_BMI', 0.0))
+        dt_DiabetesPedigreeFunction = st.number_input('DiabetesPedigreeFunction', min_value=0.0, max_value=10.0, step=0.1, key='dt_DiabetesPedigreeFunction', value=0.0 if st.session_state.clear else st.session_state.get('dt_DiabetesPedigreeFunction', 0.0))
+        dt_Age = st.number_input('Age', min_value=0.0, max_value=10.0, step=0.1, key='dt_Age', value=0.0 if st.session_state.clear else st.session_state.get('dt_Age', 0.0))
+
+        classes_list = ['Diabetes', 'No Diabetes']
+        
+        # Button to detect the Iris species
+        if st.button('Detect', key='dt_detect'):
+            # Prepare the input data for prediction
+            dt_input_data = [[dt_Pregnancies, dt_Glucose, dt_BloodPressure, dt_SkinThickness, dt_Insulin, dt_BMI, dt_DiabetesPedigreeFunction, dt_Age]]
+            
+            # Predict the Iris species
+            dt_prediction = dt_classifier.predict(dt_input_data)
+            
+            # Display the prediction result
+            st.markdown(f'The predicted outcome is: `{classes_list[dt_prediction[0]]}`')
+
+    with col_pred[2]:
         st.markdown("#### Logistic Regression")
 
          # Input boxes for the features
         log_Pregnancies = st.number_input('Pregnancies', min_value=0, max_value=100, step=1, key='log_Pregnancies', value=0 if st.session_state.clear else st.session_state.get('log_Pregnancies', 0.0))
-        log_Glucose = st.number_input('Glucose', min_value=0, max_value=500, step=1, key='log_Glucose', value=0 if st.session_state.clear else st.session_state.get('log_Glucose', 0.0))
-        log_BloodPressure = st.number_input('BloodPressure', min_value=0, max_value=500, step=1, key='log_BloodPressure', value=0 if st.session_state.clear else st.session_state.get('log_BloodPressure', 0.0))
-        log_SkinThickness = st.number_input('SkinThickness', min_value=0, max_value=500, step=1, key='log_SkinThickness', value=0 if st.session_state.clear else st.session_state.get('log_SkinThickness', 0.0))
-        log_Insulin = st.number_input('Insulin', min_value=0, max_value=1000, step=1, key='log_Insulin', value=0 if st.session_state.clear else st.session_state.get('log_Insulin', 0.0))
-        log_BMI = st.number_input('BMI', min_value=0, max_value=100, step=1, key='log_BMI', value=0 if st.session_state.clear else st.session_state.get('log_BMI', 0.0))
-        log_DiabetesPedigreeFunction = st.number_input('DiabetesPedigreeFunction', min_value=0.000, max_value=0.500, step=0.010, key='log_DiabetesPedigreeFunction', value=0.000 if st.session_state.clear else st.session_state.get('log_DiabetesPedigreeFunction', 0.000))
-        log_Age = st.number_input('Age', min_value=0, max_value=100, step=1, key='log_Age', value=0 if st.session_state.clear else st.session_state.get('log_Age', 0.0))
+        log_Glucose = st.number_input('Glucose', min_value=0.0, max_value=10.0, step=0.1, key='log_Glucose', value=0.0 if st.session_state.clear else st.session_state.get('log_Glucose', 0.0))
+        log_BloodPressure = st.number_input('BloodPressure', min_value=0.0, max_value=10.0, step=0.1, key='log_BloodPressure', value=0.0 if st.session_state.clear else st.session_state.get('log_BloodPressure', 0.0))
+        log_SkinThickness = st.number_input('SkinThickness', min_value=0.0, max_value=10.0, step=0.1, key='log_SkinThickness', value=0.0 if st.session_state.clear else st.session_state.get('log_SkinThickness', 0.0))
+        log_Insulin = st.number_input('Insulin', min_value=0.0, max_value=10.0, step=0.1, key='log_Insulin', value=0.0 if st.session_state.clear else st.session_state.get('log_Insulin', 0.0))
+        log_BMI = st.number_input('BMI', min_value=0.0, max_value=10.0, step=0.1, key='log_BMI', value=0.0 if st.session_state.clear else st.session_state.get('log_BMI', 0.0))
+        log_DiabetesPedigreeFunction = st.number_input('DiabetesPedigreeFunction', min_value=0.0, max_value=10.0, step=0.1, key='log_DiabetesPedigreeFunction', value=0.0 if st.session_state.clear else st.session_state.get('log_DiabetesPedigreeFunction', 0.0))
+        log_Age = st.number_input('Age', min_value=0.0, max_value=10.0, step=0.1, key='log_Age', value=0.0 if st.session_state.clear else st.session_state.get('log_Age', 0.0))
 
         classes_list = ['Diabetes', 'No Diabetes']
         
